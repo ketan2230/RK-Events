@@ -1,9 +1,13 @@
+import logo from './logo.png';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <h1 className='title'>Coming Soon</h1>
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h1 className='App-subheader'>Coming Soon</h1>
+      </header>
     </div>
   );
 }
