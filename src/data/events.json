@@ -1,0 +1,298 @@
+{
+  "heading": "Checkout the Themes",
+  "subHeading": "Note :- This images are just for the reference purpose",
+  "tabs": {
+    "Marriage": [
+      {
+        "imageSrc": "images/category/marriage/chori/image1.jpg",
+        "title": "Chori Theme 1",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "chori-theam-1"
+      },
+      {
+        "imageSrc": "images/category/marriage/chori/image2.jpg",
+        "title": "Chori Theme 2",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "chori-theam-2"
+      },
+      {
+        "imageSrc": "images/category/marriage/chori/image3.jpg",
+        "title": "Chori Theme 3",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "chori-theam-3"
+      },
+      {
+        "imageSrc": "images/category/marriage/chori/image4.jpg",
+        "title": "Chori Theme 4",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "chori-theam-4"
+      },
+      {
+        "imageSrc": "images/category/marriage/haldi/image1.jpg",
+        "title": "Haldi Theme 1",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "haldi-theam-1"
+      },
+      {
+        "imageSrc": "images/category/marriage/haldi/image2.jpg",
+        "title": "Haldi Theme 2",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "haldi-theam-2"
+      },
+      {
+        "imageSrc": "images/category/marriage/haldi/image3.jpg",
+        "title": "Haldi Theme 3",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "haldi-theam-3"
+      },
+      {
+        "imageSrc": "images/category/marriage/haldi/image4.jpg",
+        "title": "Haldi Theme 4",
+        "content": "Patle Color Theme",
+        "category": "haldi",
+        "slug": "haldi-theam-4"
+      }
+    ],
+    "Birthday": [
+      {
+        "imageSrc": "images/category/birthday/image1.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-1"
+      },
+      {
+        "imageSrc": "images/category/birthday/image2.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-2"
+      },
+      {
+        "imageSrc": "images/category/birthday/image3.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-3"
+      },
+      {
+        "imageSrc": "images/category/birthday/image4.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-4"
+      },
+      {
+        "imageSrc": "images/category/birthday/image5.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-5"
+      },
+      {
+        "imageSrc": "images/category/birthday/image6.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-6"
+      },
+      {
+        "imageSrc": "images/category/birthday/image7.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-7"
+      },
+      {
+        "imageSrc": "images/category/birthday/image8.jpg",
+        "title": "Birthday Theme",
+        "content": "Patle Color Theme",
+        "slug": "birthday-theam-8"
+      }
+    ],
+    "RingCeremony": [
+      {
+        "imageSrc": "images/category/ringceremony/image1.jpg",
+        "title": "Theme 1",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-1"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image2.jpg",
+        "title": "Theme 2",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-2"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image3.jpg",
+        "title": "Theme 3",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-3"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image4.jpg",
+        "title": "Theme 4",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-4"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image5.jpg",
+        "title": "Theme 5",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-5"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image6.jpg",
+        "title": "Theme 6",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-6"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image7.jpg",
+        "title": "Theme 7",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-7"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image8.jpg",
+        "title": "Theme 8",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-8"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image9.jpg",
+        "title": "Theme 9",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-9"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image10.jpg",
+        "title": "Theme 10",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-10"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image11.jpg",
+        "title": "Theme 11",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-11"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image12.jpg",
+        "title": "Theme 12",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-12"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image13.jpg",
+        "title": "Theme 13",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-13"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image14.jpg",
+        "title": "Theme 14",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-14"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image15.jpg",
+        "title": "Theme 15",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-15"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image16.jpg",
+        "title": "Theme 16",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-16"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image17.jpeg",
+        "title": "Theme 17",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-17"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image18.webp",
+        "title": "Theme 18",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-18"
+      },
+      {
+        "imageSrc": "images/category/ringceremony/image19.jpeg",
+        "title": "Theme 19",
+        "content": "Patle Color Theme",
+        "slug": "ring-theam-19"
+      }
+    ],
+    "BabyShower": [
+      {
+        "imageSrc": "images/category/babyshower/image1.jpg",
+        "title": "Theme 1",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-1"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image2.jpg",
+        "title": "Theme 2",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-2"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image3.jpg",
+        "title": "Theme 3",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-3"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image4.jpg",
+        "title": "Theme 4",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-4"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image5.jpg",
+        "title": "Theme 5",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-5"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image6.jpg",
+        "title": "Theme 6",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-6"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image7.jpg",
+        "title": "Theme 7",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-7"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image8.jpg",
+        "title": "Theme 8",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-8"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image9.jpg",
+        "title": "Theme 9",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-9"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image10.jpg",
+        "title": "Theme 10",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-10"
+      },
+      {
+        "imageSrc": "images/category/babyshower/image11.jpg",
+        "title": "Theme 11",
+        "content": "Patle Color Theme",
+        "slug": "babyshower-theam-11"
+      }
+    ]
+  }
+}
