@@ -47,7 +47,7 @@ export default () => {
     </NavLinks>,
   ];
 
-  const event = Data.tabs.Marriage.find((el) => el.slug == id);
+  const event = Data.tabs.Marriage.find((el) => el.slug === id);
   return event ? (
     <AnimationRevealPage>
       {/* <Header /> */}
