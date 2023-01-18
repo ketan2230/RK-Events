@@ -68,7 +68,7 @@ export default () => {
         <HeaderRow>
           <Header>{Data.heading}</Header>
           <TabsControl>
-            {Object.keys(Data).map((tabName, index) => (
+            {tabsKeys.map((tabName, index) => (
               <TabControl
                 key={index}
                 active={activeTab === tabName}
