@@ -33,7 +33,7 @@ const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm t
 export default ({
   gotoAbout,
   gotoFeatures,
-  gotoTheam,
+  gotoThemes,
   gotoReview,
   gotoContact,
 }) => {
@@ -50,7 +50,7 @@ export default ({
           <LinksContainer>
             <Link onClick={() => navigate(`/`)}>Home</Link>
             <Link onClick={() => gotoAbout()}>About</Link>
-            <Link onClick={() => gotoTheam()}>Themes</Link>
+            <Link onClick={() => gotoThemes()}>Themes</Link>
             <Link onClick={() => gotoFeatures()}>Services</Link>
             <Link onClick={() => gotoReview()}>Reviews</Link>
             <Link onClick={() => gotoContact()}>Contact Us</Link>

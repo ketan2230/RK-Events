@@ -44,12 +44,12 @@ export default ({
   gotoContact,
   gotoFeatures,
   gotoReview,
-  gotoTheam,
+  gotoThemes,
 }) => {
   const navLinks = [
     <NavLinks key={1}>
       <NavLink onClick={() => gotoAbout()}>About</NavLink>
-      <NavLink onClick={() => gotoTheam()}>Themes</NavLink>
+      <NavLink onClick={() => gotoThemes()}>Themes</NavLink>
       <NavLink onClick={() => gotoFeatures()}>Features</NavLink>
       <NavLink onClick={() => gotoReview()}>Reviews</NavLink>
       <NavLink onClick={() => gotoContact()}>Contact Us</NavLink>

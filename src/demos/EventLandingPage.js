@@ -20,13 +20,13 @@ export default () => {
   const imageCss = tw`rounded-4xl`;
 
   const refAbout = useRef(null);
-  const refTheam = useRef(null);
+  const refThemes = useRef(null);
   const refFeatures = useRef(null);
   const refReview = useRef(null);
   const refContact = useRef(null);
 
   const gotoAbout = () => refAbout.current.scrollIntoView();
-  const gotoTheam = () => refTheam.current.scrollIntoView();
+  const gotoThemes = () => refThemes.current.scrollIntoView();
   const gotoFeatures = () => refFeatures.current.scrollIntoView();
   const gotoReview = () => refReview.current.scrollIntoView();
   const gotoContact = () => refContact.current.scrollIntoView();
@@ -38,7 +38,7 @@ export default () => {
         gotoContact={gotoContact}
         gotoFeatures={gotoFeatures}
         gotoReview={gotoReview}
-        gotoTheam={gotoTheam}
+        gotoThemes={gotoThemes}
       />
       <div ref={refAbout}>
         <MainFeature
@@ -77,7 +77,7 @@ export default () => {
           ref={refAbout}
         />
       </div>
-      <div ref={refTheam}>
+      <div ref={refThemes}>
         <TabGrid />
       </div>
       <div ref={refFeatures}>
@@ -122,7 +122,7 @@ export default () => {
       </div>
       <Footer
         gotoAbout={gotoAbout}
-        gotoTheam={gotoTheam}
+        gotoThemes={gotoThemes}
         gotoFeatures={gotoFeatures}
         gotoReview={gotoReview}
         gotoContact={gotoContact}
