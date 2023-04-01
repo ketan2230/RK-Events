@@ -1,3 +1,6 @@
+import OwlCarousel from 'react-owl-carousel';
+import 'owl.carousel/dist/assets/owl.carousel.css';
+import 'owl.carousel/dist/assets/owl.theme.default.css';
 import AnimationRevealPage from "helpers/AnimationRevealPage";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/TwoColumnWithImage";
@@ -33,7 +36,7 @@ export default () => {
 
   return (
     <AnimationRevealPage>
-      <Hero 
+      <Hero
         gotoAbout={gotoAbout}
         gotoContact={gotoContact}
         gotoFeatures={gotoFeatures}
@@ -52,7 +55,7 @@ export default () => {
           }
           description={
             <Description>
-              RK Event Planner, your one stop solution for making any event
+              RK Events, your one stop solution for making any event
               memorable or a success.
               <br />
               <br />
@@ -120,6 +123,17 @@ export default () => {
       <div ref={refContact}>
         <ContactUsForm />
       </div>
+      {/* <OwlCarousel className='owl-theme' autoplay items={1} loop margin={2}>
+        <carouselItem class='item'>
+          <h4>1</h4>
+        </carouselItem>
+        <carouselItem class='item'>
+          <h4>2</h4>
+        </carouselItem>
+        <carouselItem class='item'>
+          <h4>3</h4>
+        </carouselItem>
+      </OwlCarousel> */}
       <Footer
         gotoAbout={gotoAbout}
         gotoThemes={gotoThemes}

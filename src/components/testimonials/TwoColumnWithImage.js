@@ -10,6 +10,7 @@ import { ReactComponent as ArrowLeftIcon } from "../../images/arrow-left-2-icon.
 import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-2-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-5.svg";
+import Data from "data/events.json"
 
 import "slick-carousel/slick/slick.css";
 
@@ -31,16 +32,16 @@ const TextContainer = tw.div`md:mx-3 lg:mx-6 md:w-6/12 py-4 flex flex-col justif
 const QuoteContainer = tw.div`relative p-6 md:p-8 lg:p-10 mt-4 md:mt-0`;
 const Quote = tw.blockquote`text-center md:text-left font-medium text-xl lg:text-2xl xl:text-3xl`;
 const CustomerInfo = tw.div`px-5 lg:px-10 text-center md:text-left mt-4 md:mt-0`;
-const CustomerName = tw.h5`font-bold text-lg lg:text-xl xl:text-2xl text-primary-500`;
+const CustomerName = tw.h5`font-bold text-lg lg:text-xl xl:text-2xl text-primary-800`;
 const HIghlightedHeader = tw.p`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`
 
-const QuotesLeft = tw(QuotesLeftIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute top-0 left-0`;
-const QuotesRight = tw(QuotesRightIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-500 absolute bottom-0 right-0`;
+const QuotesLeft = tw(QuotesLeftIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-800 absolute top-0 left-0`;
+const QuotesRight = tw(QuotesRightIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-800 absolute bottom-0 right-0`;
 
 const SliderControlButtonContainer = styled.div`
   ${tw`absolute top-0 h-full flex items-end md:items-center z-20`}
   button {
-    ${tw`text-secondary-500 hover:text-primary-500 focus:outline-none transition duration-300 transform hover:scale-125 transform -translate-y-2/3 md:translate-y-0`}
+    ${tw`text-secondary-500 hover:text-primary-800 focus:outline-none transition duration-300 transform hover:scale-125 transform -translate-y-2/3 md:translate-y-0`}
     svg {
       ${tw`w-8`}
     }
@@ -64,7 +65,7 @@ const PreviousArrow = ({ currentSlide, slideCount, ...props }) => (
 
 const DecoratorBlob1 = tw(
   SvgDecoratorBlob1
-)`absolute w-32 top-0 left-0 -z-10 text-primary-500 opacity-25 transform -translate-x-full`;
+)`absolute w-32 top-0 left-0 -z-10 text-primary-800 opacity-25 transform -translate-x-full`;
 const DecoratorBlob2 = tw(
   SvgDecoratorBlob2
 )`absolute w-32 bottom-0 right-0 -z-10 text-pink-500 opacity-15 transform translate-x-2/3 translate-y-8`;
@@ -74,27 +75,7 @@ export default () => {
    * You can modify the testimonials shown by modifying the array below
    * You can add or remove objects from the array as you need.
    */
-  const testimonials = [
-    {
-      imageSrc: "/images/customer/image6.jpg",
-      quote:
-        `Fantastic work and design. Very punctual and Food was awesome. We definitely recommend them to everyone. Thank you so much you did tremendous work RK events.🎊🎊🥳🥳😍😍`,
-      customerName: "Pratik Jha"
-    },
-    {
-      imageSrc:
-        "/images/customer/image5.png",
-      quote:"RK events provide very good services. Decoration done by them was awesome. Staff was great and much helpful. Food provided by them was healthy and tasty. Thank you so much RK events to make our event beautiful and memorable.",
-      customerName: "Hiral Mashru"
-    },
-    {
-      imageSrc:
-        "/images/customer/image7.jpg",
-      quote:
-        "Superb Service by RK events. My son's birthday decoration was Awesome!!! Great person who think for customer satisfaction not money!!! Don't think call and book!!! 👍👍👍",
-      customerName: "Pinak Kushakiya"
-    }
-  ];
+  const testimonials = Data.testimonials;
   return (
     <Container>
       <Content>

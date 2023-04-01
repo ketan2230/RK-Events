@@ -294,5 +294,27 @@
         "slug": "babyshower-theam-11"
       }
     ]
-  }
+  },
+  "testimonials": [
+    {
+      "imageSrc": "/images/customer/image6.jpg",
+      "quote":"Fantastic work and design. Very punctual and Food was awesome. We definitely recommend them to everyone. Thank you so much you did tremendous work RK events.🎊🎊🥳🥳😍😍",
+      "customerName": "Pratik Jha"
+    },
+    {
+      "imageSrc":"/images/customer/image5.png",
+      "quote":"RK events provide very good services. Decoration done by them was awesome. Staff was great and much helpful. Food provided by them was healthy and tasty. Thank you so much RK events to make our event beautiful and memorable.",
+      "customerName": "Hiral Mashru"
+    },
+    {
+      "imageSrc":"/images/customer/image7.jpg",
+      "quote":"Superb Service by RK events. My son's birthday decoration was Awesome!!! Great person who think for customer satisfaction not money!!! Don't think call and book!!! 👍👍👍",
+      "customerName": "Pinak Kushakiya"
+    },
+    {
+      "imageSrc":"/images/customer/image5.png",
+      "quote":"RK events provide very good services. Decoration done by them was awesome. Staff was great and much helpful. Food provided by them was healthy and tasty. Thank you so much RK events to make our event beautiful and memorable.",
+      "customerName": "Hiral Mashru"
+    }
+  ]
 }

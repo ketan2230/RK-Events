@@ -15,7 +15,6 @@ const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 const Row = tw.div`flex items-center justify-center flex-col px-8`;
 
 const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
-const LogoImg = tw.img`w-10`;
 const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`;
@@ -44,8 +43,9 @@ export default ({
       <Content>
         <Row>
           <LogoContainer>
-            <LogoImg src={logo} />
-            <LogoText onClick={() => navigate(`/`)}>RK Event Planner</LogoText>
+            <img src={logo} alt="logo" width="70px" />
+            {/* <LogoImg src={logo} width="70px" /> */}
+            <LogoText onClick={() => navigate(`/`)}>RK EVENTS</LogoText>
           </LogoContainer>
           <LinksContainer>
             <Link onClick={() => navigate(`/`)}>Home</Link>
@@ -70,7 +70,7 @@ export default ({
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2022, RK Events Planner All Rights Reserved.
+            &copy; Copyright 2023, RK EVENTS Planner All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>

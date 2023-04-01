@@ -24,12 +24,12 @@ export const NavLinks = tw.div`inline-block`;
 export const NavLink = tw.a`
   text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300
-  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-500
+  pb-1 border-b-2 border-transparent hover:border-primary-500 hocus:text-primary-800
 `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-primary-500 text-gray-100
+  px-8 py-3 rounded bg-primary-800 text-gray-100
   hocus:bg-primary-900 focus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
@@ -44,7 +44,7 @@ export const LogoLink = styled(NavLink)`
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none hocus:text-primary-500 transition duration-300
+  lg:hidden z-20 focus:outline-none hocus:text-primary-800 transition duration-300
 `;
 export const MobileNavLinks = motion(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}
@@ -99,8 +99,8 @@ export default ({
 
   const defaultLogoLink = (
     <LogoLink onClick={() => navigate("/")}>
-      <img src={logo} alt="logo" width="90px" />
-      RK Event Planner
+      <img src={logo} alt="logo" width="70px" />
+      RK EVENTS
     </LogoLink>
   );
 
