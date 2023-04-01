@@ -74,7 +74,7 @@ export default ({
               <Input type="text" name="occasion" placeholder="Ocassion" required />
               <Input type="date" name="date" placeholder="Date" required />
               <Textarea name="message" placeholder="requirements, venue and Etc." required />
-              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
+              <SubmitButton type="submit" onClick={sendEmail}>{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
         </TextColumn>
