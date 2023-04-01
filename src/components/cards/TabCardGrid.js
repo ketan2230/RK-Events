@@ -12,7 +12,7 @@ import Data from "data/events.json"
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
-const SubHeader = tw.p`text-base text-gray-500`;
+const SubHeader = tw.p`text-base text-gray-500 text-xs`;
 const TabsControl = tw.div`flex flex-wrap bg-gray-200 px-2 py-2 rounded leading-none mt-12 xl:mt-0`;
 
 const TabControl = styled.div`
@@ -27,7 +27,7 @@ const TabControl = styled.div`
 const TabContent = tw(
   motion.div
 )`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
-const CardContainer = tw.div`mt-10 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12`;
+const CardContainer = tw.div`mt-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12`;
 const Card = tw(
   motion.a
 )`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0 cursor-pointer`;

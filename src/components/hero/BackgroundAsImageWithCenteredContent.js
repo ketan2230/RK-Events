@@ -14,7 +14,7 @@ import Header, {
 const StyledHeader = styled(Header)`
   ${tw`pt-5 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300`}
+    ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300 cursor-pointer`}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
