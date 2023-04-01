@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
+import emailjs from '@emailjs/browser';
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -42,6 +43,20 @@ export default ({
 }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_o72ffxs', 'template_dde44iz', form.current, 'bKkL5Ani3e2QNWqfd')
+      .then((result) => {
+          console.log(result.text);
+          //sendToEmail()
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <Container>
       <TwoColumn>
@@ -52,13 +67,13 @@ export default ({
           <TextContent>
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
-              <Input type="text" name="name" placeholder="Full Name" required />
-              <Input type="number" min="10" max="10" name="contact" placeholder="Contact Number Ex:- 99999 99999" required />
-              <Input type="email" name="email" placeholder="Your Email Address" required />
-              <Input type="text" name="occasion" placeholder="Ocassion" required />
-              <Input type="date" name="date" placeholder="Date" required />
-              <Textarea name="message" placeholder="requirements, venue and Etc." required />
+            <Form action={formAction} ref={form} onSubmit={sendEmail}>
+              <Input type="text" name="from_name" placeholder="Full Name" required/>
+              <Input type="number" min={10} max={10} name="contact" placeholder="Contact Number" required/>
+              <Input type="email" name="reply_to" placeholder="Your Email Address" required/>
+              <Input type="text" name="occasion" placeholder="Ocassion" required/>
+              <Input type="date" name="event_date" placeholder="Date" />
+              <Textarea name="requirenment" placeholder="requirements, venue and Etc. " required/>
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
