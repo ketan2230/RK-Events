@@ -67,14 +67,14 @@ export default ({
           <TextContent>
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
-            <Form action={formAction} method={formMethod}>
-              <Input type="text" name="name" placeholder="Full Name" required />
-              <Input type="number"name="contact" placeholder="Contact Number Ex:- 99999 99999" required />
-              <Input type="email" name="email" placeholder="Your Email Address" required />
-              <Input type="text" name="occasion" placeholder="Ocassion" required />
-              <Input type="date" name="date" placeholder="Date" required />
-              <Textarea name="message" placeholder="requirements, venue and Etc." required />
-              <SubmitButton type="submit" onClick={sendEmail}>{submitButtonText}</SubmitButton>
+            <Form action={formAction} ref={form} onSubmit={sendEmail}>
+              <Input type="text" name="from_name" placeholder="Full Name" required/>
+              <Input type="number" name="contact" placeholder="Contact Number" required/>
+              <Input type="email" name="reply_to" placeholder="Your Email Address" required/>
+              <Input type="text" name="occasion" placeholder="Ocassion" required/>
+              <Input type="date" name="event_date" placeholder="Date" />
+              <Textarea name="requirenment" placeholder="requirements, venue and Etc. " required/>
+              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
         </TextColumn>
