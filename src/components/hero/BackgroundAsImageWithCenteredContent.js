@@ -1,6 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
+import { useState, useEffect } from 'react';
 
 import Header, {
   NavLink,
@@ -10,6 +11,14 @@ import Header, {
   NavToggle,
   DesktopNavLinks,
 } from "../headers/light.js";
+
+const bgImages = [
+  'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80',
+  'https://images.unsplash.com/photo-1568469842360-715366f82f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+  'https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+  'https://images.unsplash.com/photo-1638619140370-550155b65e51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+  'https://images.unsplash.com/photo-1515715709530-858f7bfa1b10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1203&q=80',
+];
 
 const StyledHeader = styled(Header)`
   ${tw`pt-5 max-w-none w-full`}
@@ -24,7 +33,6 @@ const StyledHeader = styled(Header)`
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
-  background-image: url("https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
@@ -60,8 +68,26 @@ export default ({
     </NavLinks>,
   ];
 
+  const [bgIndex, setBgIndex] = useState(0);
+  const currentBgImage = bgImages[bgIndex % bgImages.length];
+
+  const style = {
+    backgroundImage: `url(${currentBgImage})`,
+    transition: 'opacity 4s ease-in-out',
+    opacity: 1,
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgIndex((prevIndex) => prevIndex + 1);
+    }, 5000);
+  
+    return () => clearInterval(interval);
+  }, []);
+
+
   return (
-    <Container>
+    <Container style={style}>
       <OpacityOverlay />
       <HeroContainer>
         <StyledHeader links={navLinks} />

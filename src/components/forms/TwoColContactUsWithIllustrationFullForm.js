@@ -6,6 +6,8 @@ import { SectionHeading } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -27,14 +29,14 @@ const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:t
 
 const Form = tw.form`mt-8 md:mt-10 text-sm flex flex-col max-w-sm mx-auto md:mx-0`
 const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-medium transition duration-300 focus:border-primary-500`
-const Textarea = styled(Input).attrs({as: "textarea"})`
+const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
 const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
 
 export default ({
-  heading = <>Feel free to <span tw="text-primary-800">get in touch</span><wbr/> with us.</>,
+  heading = <>Feel free to <span tw="text-primary-800">get in touch</span><wbr /> with us.</>,
   description = "Please Provide all details which mentioned in form, so we can provide our best services to you",
   submitButtonText = "Send",
   formAction = "#",
@@ -47,13 +49,21 @@ export default ({
 
   const sendEmail = (e) => {
     e.preventDefault();
-
+    console.log(form.current);
     emailjs.sendForm('service_o72ffxs', 'template_dde44iz', form.current, 'bKkL5Ani3e2QNWqfd')
       .then((result) => {
-          console.log(result.text);
-          //sendToEmail()
+        if (result) {
+          toast.success("Your details are submited Successfully",{
+            style: {
+              backgroundColor: '#5011CC',
+              width: '350px'
+            },
+          });
+        } else {
+          toast.error("Something went wrong !");
+        }
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
   };
 
@@ -68,17 +78,30 @@ export default ({
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
             <Form action={formAction} ref={form} onSubmit={sendEmail}>
-              <Input type="text" name="from_name" placeholder="Full Name" required/>
-              <Input type="number" name="contact" placeholder="Contact Number" required/>
-              <Input type="email" name="reply_to" placeholder="Your Email Address" required/>
-              <Input type="text" name="occasion" placeholder="Ocassion" required/>
+              <Input type="text" name="from_name" placeholder="Full Name" required />
+              <Input type="number" name="contact" placeholder="Contact Number" required />
+              <Input type="email" name="reply_to" placeholder="Your Email Address" required />
+              <Input type="text" name="occasion" placeholder="Ocassion" required />
               <Input type="date" name="event_date" placeholder="Date" />
-              <Textarea name="requirenment" placeholder="requirements, venue and Etc. " required/>
+              <Textarea name="requirenment" placeholder="requirements, venue and Etc. " required />
               <SubmitButton type="submit">{submitButtonText}</SubmitButton>
             </Form>
           </TextContent>
         </TextColumn>
       </TwoColumn>
+      <ToastContainer
+        toastClassName="bg-primary-800"
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </Container>
   );
 };
