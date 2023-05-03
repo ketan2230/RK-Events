@@ -13,12 +13,27 @@ import Header, {
 } from "../headers/light.js";
 
 const bgImages = [
-  'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80',
-  'https://images.unsplash.com/photo-1568469842360-715366f82f62?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  'https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  'https://images.unsplash.com/photo-1638619140370-550155b65e51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
-  'https://images.unsplash.com/photo-1515715709530-858f7bfa1b10?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1203&q=80',
-];
+  {
+    imageSrc: "/images/mainPage/image1.jpg",
+    slogan:"Leave the planning to us, and enjoy the celebration."
+  },
+  {
+    imageSrc: "/images/mainPage/image2.jpg",
+    slogan:"Designing experiences that will leave you speechless."
+  },
+  {
+    imageSrc: "/images/mainPage/image3.jpg",
+    slogan:"Let's make your dream event a reality!"
+  },
+  {
+    imageSrc: "/images/mainPage/image4.jpg",
+    slogan:"Creating memories that will last a lifetime."
+  },
+  {
+    imageSrc: "/images/mainPage/image5.jpg",
+    slogan:"From concept to execution, we've got you covered."
+  }
+]
 
 const StyledHeader = styled(Header)`
   ${tw`pt-5 max-w-none w-full`}
@@ -38,7 +53,7 @@ const Container = styled.div`
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
 
 const HeroContainer = tw.div`z-20 relative px-6 sm:px-8 mx-auto h-full flex flex-col`;
-const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center`;
+const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center w-3/5 mx-auto`;
 
 const Heading = styled.h1`
   ${tw`text-3xl text-center sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0`}
@@ -72,7 +87,7 @@ export default ({
   const currentBgImage = bgImages[bgIndex % bgImages.length];
 
   const style = {
-    backgroundImage: `url(${currentBgImage})`,
+    backgroundImage: `url(${currentBgImage.imageSrc})`,
     transition: 'opacity 4s ease-in-out',
     opacity: 1,
   };
@@ -81,7 +96,7 @@ export default ({
     const interval = setInterval(() => {
       setBgIndex((prevIndex) => prevIndex + 1);
     }, 5000);
-  
+
     return () => clearInterval(interval);
   }, []);
 
@@ -93,9 +108,7 @@ export default ({
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-            It's time to celebrate!
-            <br />
-            We plan best events
+            {currentBgImage.slogan}
           </Heading>
           {/* <PrimaryAction>Explore Themes</PrimaryAction> */}
         </Content>
