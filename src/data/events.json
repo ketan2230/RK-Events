@@ -316,27 +316,5 @@
       "quote":"RK events provide very good services. Decoration done by them was awesome. Staff was great and much helpful. Food provided by them was healthy and tasty. Thank you so much RK events to make our event beautiful and memorable.",
       "customerName": "Hiral Mashru"
     }
-  ],
-  "mainPageImagesSlogan": [
-    {
-      "imageSrc": "/images/mainPage/image1.jpg",
-      "slogan":"Leave the planning to us, and enjoy the celebration."
-    },
-    {
-      "imageSrc": "/images/mainPage/image2.jpg",
-      "slogan":"Designing experiences that will leave you speechless."
-    },
-    {
-      "imageSrc": "/images/mainPage/image3.jpg",
-      "slogan":"Let's make your dream event a reality!"
-    },
-    {
-      "imageSrc": "/images/mainPage/image4.jpg",
-      "slogan":"Creating memories that will last a lifetime."
-    },
-    {
-      "imageSrc": "/images/mainPage/image5.jpg",
-      "slogan":"From concept to execution, we've got you covered."
-    }
   ]
 }
