@@ -4,9 +4,9 @@ import styled from "styled-components";
 import { Container as ContainerBase } from "components/misc/Layouts.js";
 import logo from "../../images/logoWhite.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
-import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
+import { ReactComponent as GoogleIcon } from "../../images/google-icon1.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
-import { ReactComponent as LinkedinIcon } from "../../images/linkedin-icon.svg";
+import { ReactComponent as InstagramIcon } from "../../images/instagram-icon.svg";
 import { useNavigate } from "react-router-dom";
 
 const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-5`;
@@ -56,17 +56,17 @@ export default ({
             <Link onClick={() => gotoContact()}>Contact Us</Link>
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
+            <SocialLink href="https://www.facebook.com/people/RK-Events/100063812500363/" target="_">
               <FacebookIcon />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
+            <SocialLink href="https://g.page/r/CUnV5lNVHs9vEA0" target="_">
+              <GoogleIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
+            <SocialLink href="https://youtube.com/@rk_events" target="_">
               <YoutubeIcon />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
-              <LinkedinIcon />
+            <SocialLink href="https://www.instagram.com/r_k__events/" target="_">
+              <InstagramIcon />
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
