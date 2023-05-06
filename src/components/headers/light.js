@@ -123,6 +123,7 @@ export default ({
           animate={animation}
           css={collapseBreakpointCss.mobileNavLinks}
         >
+        <CloseIcon tw="w-6 h-6 ml-auto" onClick={toggleNavbar} />
           {links}
         </MobileNavLinks>
         <NavToggle
@@ -130,7 +131,7 @@ export default ({
           className={showNavLinks ? "open" : "closed"}
         >
           {showNavLinks ? (
-            <CloseIcon tw="w-6 h-6" />
+            ''
           ) : (
             <MenuIcon tw="w-6 h-6" />
           )}
