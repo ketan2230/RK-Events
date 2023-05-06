@@ -75,7 +75,7 @@ export default ({
   useEffect(() => {
     const interval = setInterval(() => {
       setBgIndex((prevIndex) => prevIndex + 1);
-    }, 5000);
+    }, 7000);
   
     return () => clearInterval(interval);
   }, []);

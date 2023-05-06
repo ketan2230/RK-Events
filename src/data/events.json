@@ -338,5 +338,62 @@
       "imageSrc": "/images/mainPage/image5.jpg",
       "slogan":"From concept to execution, we've got you covered."
     }
+  ],
+  "features": [
+    {
+      "title": "Seamless Event Registration",
+      "imageSrc": "",
+      "description": "Our user-friendly event planning platform offers seamless event registration, allowing attendees to easily sign up and provide necessary information. With just a few clicks, participants can secure their spot and receive instant confirmation, ensuring a hassle-free experience."
+    },
+    {
+      "title": "Interactive Event Calendars",
+      "imageSrc": "",
+      "description": "Stay organized with our interactive event calendars that display upcoming events, dates, and times. Our intuitive interface allows users to browse through different categories, view event details, and save events directly to their personal calendars for easy access and reminders."
+    },
+    {
+      "title": "Comprehensive Vendor Directory",
+      "imageSrc": "",
+      "description": "Discover a wide range of trusted vendors through our comprehensive directory. Whether you need caterers, decorators, photographers, or entertainment services, our platform connects you with top-quality professionals, making event planning a breeze."
+    },
+    {
+      "title": "",
+      "imageSrc": "",
+      "description": ""
+    },
+    {
+      "title": "Real-time Collaboration",
+      "imageSrc": "",
+      "description": "Our platform enables real-time collaboration between event organizers, vendors, and clients. Through instant messaging, document sharing, and progress tracking, everyone involved can communicate effectively, ensuring that all aspects of the event are coordinated seamlessly."
+    },
+    {
+      "title": "Budget Management Tools",
+      "imageSrc": "",
+      "description": "Take control of your event budget with our intuitive budget management tools. Set spending limits, track expenses, and receive alerts when nearing your budget threshold. Our platform empowers you to make informed financial decisions and avoid overspending."
+    },
+    {
+      "title": "Social Media Integration",
+      "imageSrc": "",
+      "description": "Leverage the power of social media to maximize event exposure and engagement. Our platform offers seamless integration with popular social media platforms, allowing you to promote your event, share updates, and generate buzz to reach a wider audience."
+    },
+    {
+      "title": "Venue Booking Made Easy",
+      "imageSrc": "",
+      "description": "Simplify the venue booking process with our user-friendly platform. Browse through a diverse selection of venues, compare pricing and amenities, and book the perfect location for your event—all within a few clicks. Say goodbye to endless phone calls and paperwork."
+    },
+    {
+      "title": "Event Analytics and Insights",
+      "imageSrc": "",
+      "description": "Gain valuable insights into the success of your event through our analytics dashboard. Track attendee engagement, ticket sales, and other key metrics, enabling you to make data-driven decisions for future events and enhance your overall planning strategy."
+    },
+    {
+      "title": "Personalized Recommendations",
+      "imageSrc": "",
+      "description": "Our intelligent recommendation system suggests tailored options based on your event preferences and requirements. From venue recommendations to vendor suggestions, our platform understands your unique needs and assists you in making the best choices."
+    },
+    {
+      "title": "Mobile App Accessibility",
+      "imageSrc": "",
+      "description": "Plan your events on the go with our mobile app. Access all the features of our event planning platform from your smartphone or tablet, allowing you to manage your events, communicate with stakeholders, and stay updated, no matter where you are."
+    }
   ]
 }
