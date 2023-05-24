@@ -7,7 +7,6 @@ import Testimonial from "components/testimonials/TwoColumnWithImage";
 import ContactUsForm from "components/forms/TwoColContactUsWithIllustrationFullForm";
 import MainFeature from "components/features/TwoColWithButton.js";
 import Features from "components/features/ThreeColSimple.js";
-import Footer from "components/footers/MiniCenteredFooter";
 
 import rupeeIcon from "images/icon/rupee.png";
 import editIcon from "images/icon/edit.png";
@@ -123,24 +122,6 @@ export default () => {
       <div ref={refContact}>
         <ContactUsForm />
       </div>
-      {/* <OwlCarousel className='owl-theme' autoplay items={1} loop margin={2}>
-        <carouselItem class='item'>
-          <h4>1</h4>
-        </carouselItem>
-        <carouselItem class='item'>
-          <h4>2</h4>
-        </carouselItem>
-        <carouselItem class='item'>
-          <h4>3</h4>
-        </carouselItem>
-      </OwlCarousel> */}
-      <Footer
-        gotoAbout={gotoAbout}
-        gotoThemes={gotoThemes}
-        gotoFeatures={gotoFeatures}
-        gotoReview={gotoReview}
-        gotoContact={gotoContact}
-      />
     </AnimationRevealPage>
   );
 };

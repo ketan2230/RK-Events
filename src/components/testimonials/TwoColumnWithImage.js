@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 import tw from "twin.macro";
+import { Container } from "components/misc/Layouts.js";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading as HeadingTitle } from "../misc/Headings.js";
 import { ReactComponent as QuotesLeftIcon } from "../../images/quotes-l.svg";
@@ -14,7 +15,6 @@ import Data from "data/events.json"
 
 import "slick-carousel/slick/slick.css";
 
-const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 const HeadingInfoContainer = tw.div`flex flex-col items-center`;
 const HeadingDescription = tw.p`mt-4 font-medium text-gray-600 text-center max-w-sm`;

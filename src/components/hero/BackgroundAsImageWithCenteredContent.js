@@ -7,28 +7,28 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import Header, {
-  NavLink,
-  NavLinks,
-  PrimaryLink as PrimaryLinkBase,
-  LogoLink,
-  NavToggle,
-  DesktopNavLinks,
-} from "../headers/light.js";
+// import Header, {
+//   NavLink,
+//   NavLinks,
+//   PrimaryLink as PrimaryLinkBase,
+//   LogoLink,
+//   NavToggle,
+//   DesktopNavLinks,
+// } from "../headers/light.js";
 
-const StyledHeader = styled(Header)`
-  ${tw`pt-5 max-w-none w-full absolute px-5 z-30`}
-  ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300`}
-  }
-  ${NavToggle}.closed {
-    ${tw`text-gray-100 hover:text-primary-500`}
-  }
-`;
+// const StyledHeader = styled(Header)`
+//   ${tw`pt-5 max-w-none w-full absolute px-5 z-30`}
+//   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+//     ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300 cursor-pointer`}
+//   }
+//   ${NavToggle}.closed {
+//     ${tw`text-gray-100 hover:text-primary-500`}
+//   }
+// `;
 
-const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
+// const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const Container = styled.div`
-  ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
+  ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144 mt-20`}
 `;
 
 const OpacityOverlay = tw.div`absolute inset-0 bg-black opacity-75`;
@@ -40,26 +40,20 @@ const Heading = styled.h1`
   ${tw`text-3xl text-center sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-100 leading-snug -mt-24 sm:mt-0 w-2/3`}
 `;
 
-export default ({
-  gotoAbout,
-  gotoContact,
-  gotoFeatures,
-  gotoReview,
-  gotoThemes,
-}) => {
-  const navLinks = [
-    <NavLinks key={1}>
-      <NavLink onClick={() => gotoAbout()}>About</NavLink>
-      <NavLink onClick={() => gotoThemes()}>Themes</NavLink>
-      <NavLink onClick={() => gotoFeatures()}>Features</NavLink>
-      <NavLink onClick={() => gotoReview()}>Reviews</NavLink>
-      <NavLink onClick={() => gotoContact()}>Contact Us</NavLink>
-      <NavLink>Tearms & Condition</NavLink>
-    </NavLinks>,
-    <NavLinks key={2}>
-      <PrimaryLink>Book Your Date</PrimaryLink>
-    </NavLinks>,
-  ];
+export default () => {
+  // const navLinks = [
+  //   <NavLinks key={1}>
+  //     <NavLink onClick={() => gotoAbout()}>About</NavLink>
+  //     <NavLink onClick={() => gotoThemes()}>Themes</NavLink>
+  //     <NavLink onClick={() => gotoFeatures()}>Features</NavLink>
+  //     <NavLink onClick={() => gotoReview()}>Reviews</NavLink>
+  //     <NavLink href="/contactUs">Contact Us</NavLink>
+  //     <NavLink>Tearms & Condition</NavLink>
+  //   </NavLinks>,
+  //   <NavLinks key={2}>
+  //     <PrimaryLink>Book Your Date</PrimaryLink>
+  //   </NavLinks>,
+  // ];
 
   const bgImages = Data.mainPageImagesSlogan;
 
@@ -67,10 +61,10 @@ export default ({
     const offset = window.scrollY;
     if (offset > 200) {
       setScrolled(true);
-      console.log(scrolled)
     } else {
       setScrolled(false);
     }
+    console.log(scrolled);
   };
 
   const [scrolled, setScrolled] = useState(false);
@@ -91,11 +85,11 @@ export default ({
   return (
     <Container>
       <HeroContainer>
-        <StyledHeader links={navLinks} />
+        {/* <StyledHeader links={navLinks} /> */}
         <OwlCarousel className="owl-theme" {...optionsOwl}>
           {bgImages.map((item) => {
             return (
-              <div class="item">
+              <div className="item">
                 <OpacityOverlay />
                 <Content
                   style={{

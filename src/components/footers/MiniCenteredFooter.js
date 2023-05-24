@@ -7,9 +7,10 @@ import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as GoogleIcon } from "../../images/google-icon1.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/instagram-icon.svg";
-import { useNavigate } from "react-router-dom";
+import { ReactComponent as WhatsAppIcon } from "../../images/whatsapp.svg";
+// import { useNavigate } from "react-router-dom";
 
-const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-5`;
+const Container = tw(ContainerBase)`bg-black text-gray-100 bottom-0 w-full`;
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`;
@@ -18,7 +19,7 @@ const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`;
-const Link = tw.a`border-b-2 border-transparent hocus:text-gray-300 hocus:border-gray-300 pb-1 transition duration-300 mt-2 mx-4`;
+const NavLink = tw.a`font-mono hover:text-gray-500 transition duration-300 mt-2 mx-4`;
 
 const SocialLinksContainer = tw.div`mt-10`;
 const SocialLink = styled.a`
@@ -29,14 +30,8 @@ const SocialLink = styled.a`
 `;
 
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
-export default ({
-  gotoAbout,
-  gotoFeatures,
-  gotoThemes,
-  gotoReview,
-  gotoContact,
-}) => {
-  const navigate = useNavigate();
+export default () => {
+  // const navigate = useNavigate();
 
   return (
     <Container>
@@ -45,19 +40,23 @@ export default ({
           <LogoContainer>
             <img src={logo} alt="logo" width="70px" />
             {/* <LogoImg src={logo} width="70px" /> */}
-            <LogoText onClick={() => navigate(`/`)}>RK EVENTS</LogoText>
+            <LogoText href="/">RK EVENTS</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <Link onClick={() => navigate(`/`)}>Home</Link>
-            <Link onClick={() => gotoAbout()}>About</Link>
-            <Link onClick={() => gotoThemes()}>Themes</Link>
-            <Link onClick={() => gotoFeatures()}>Services</Link>
-            <Link onClick={() => gotoReview()}>Reviews</Link>
-            <Link onClick={() => gotoContact()}>Contact Us</Link>
+          <NavLink href="/">Home</NavLink>
+          <NavLink href="/aboutUs">About Us</NavLink>
+          <NavLink href="/themes">Themes</NavLink>
+          <NavLink href="/features">Features</NavLink>
+          <NavLink href="/reviews">Reviews</NavLink>
+          <NavLink href="/contactUs">Contact Us</NavLink>
+          <NavLink href="/teamsCondition">Tearms & Condition</NavLink>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="https://www.facebook.com/people/RK-Events/100063812500363/" target="_">
               <FacebookIcon />
+            </SocialLink>
+            <SocialLink href="https://wa.me/+918488824036" target="_">
+              <WhatsAppIcon />
             </SocialLink>
             <SocialLink href="https://g.page/r/CUnV5lNVHs9vEA0" target="_">
               <GoogleIcon />
