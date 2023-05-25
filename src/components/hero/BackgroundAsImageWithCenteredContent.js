@@ -28,7 +28,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 
 // const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const Container = styled.div`
-  ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144 mt-20`}
+  ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144 mt-16 sm:mt-0`}
 `;
 
 const OpacityOverlay = tw.div`absolute inset-0 bg-black opacity-75`;

@@ -9,7 +9,7 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/logoWhite.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Header = tw.header`
   flex justify-between items-center
@@ -39,6 +39,12 @@ export const LogoLink = styled(NavLink)`
 
   img {
     ${tw`mr-3`}
+    height: 4rem; /* Default image height */
+
+  @media (max-width: 640px) {
+    /* Small screen styles */
+    height: 3rem; /* Adjust image height for small screens */
+  }
   }
 `;
 
@@ -95,11 +101,11 @@ export default ({
   const { showNavLinks, animation, toggleNavbar } = useAnimatedNavToggler();
   const collapseBreakpointCss =
     collapseBreakPointCssMap[collapseBreakpointClass];
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const defaultLogoLink = (
-    <LogoLink onClick={() => navigate("/")}>
-      <img src={logo} alt="logo" width="70px" />
+    <LogoLink href="/">
+      <img src={logo} alt="logo" />
       RK EVENTS
     </LogoLink>
   );
