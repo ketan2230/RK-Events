@@ -25,10 +25,10 @@ import useInView from "helpers/useInView";
 /* Hero */
 const Row = tw.div`flex`;
 const NavRow = tw(Row)`flex flex-col lg:flex-row items-center justify-between`;
-const NavLink = tw.a`mt-4 lg:mt-0 transition duration-300 font-medium pb-1 border-b-2 mr-12 text-gray-700 border-gray-400 hocus:border-gray-700`;
+const NavLink = tw.a`mt-4 lg:mt-0 transition duration-300 font-medium pb-1 border-b-2 mr-12 text-gray-700 border-gray-400 focus:border-gray-700`;
 const PrimaryNavLink = tw(
   NavLink
-)`text-gray-100 bg-primary-800 px-6 py-3 border-none rounded hocus:bg-primary-900 focus:shadow-outline mt-6 md:mt-4 lg:mt-0`;
+)`text-gray-100 bg-primary-800 px-6 py-3 border-none rounded focus:bg-primary-900 focus:shadow-outline mt-6 md:mt-4 lg:mt-0`;
 const HeroRow = tw(Row)`flex-col lg:flex-row justify-between items-center pt-8 lg:pt-12 pb-16 max-w-screen-2xl mx-auto flex-wrap`;
 
 const Column = tw.div`flex-1`;
@@ -44,11 +44,11 @@ const Description = tw(
 const Actions = tw.div`flex flex-col sm:flex-row justify-center lg:justify-start`;
 const ActionButton = tw(
   AnchorLink
-)`px-8 py-3 font-bold rounded bg-primary-800 text-gray-100 hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline focus:outline-none transition duration-300 mt-12 inline-block tracking-wide text-center px-10 py-4 font-semibold tracking-normal`;
+)`px-8 py-3 font-bold rounded bg-primary-800 text-gray-100 focus:bg-primary-700 focus:text-gray-200 focus:shadow-outline focus:outline-none transition duration-300 mt-12 inline-block tracking-wide text-center px-10 py-4 font-semibold tracking-normal`;
 const PrimaryButton = tw(ActionButton)``;
 const SecondaryButton = tw(
   ActionButton
-)`mt-6 sm:mt-12 sm:ml-8 bg-gray-300 text-gray-800 hocus:bg-gray-400 hocus:text-gray-900`;
+)`mt-6 sm:mt-12 sm:ml-8 bg-gray-300 text-gray-800 focus:bg-gray-400 focus:text-gray-900`;
 const FeatureList = tw.ul`mt-6 leading-loose flex flex-wrap max-w-xl mx-auto lg:mx-0`;
 const Feature = tw.li`mt-2 flex items-center flex-shrink-0 w-full sm:w-1/2 justify-center lg:justify-start`;
 const FeatureIcon = tw(CheckboxIcon)`w-5 h-5 text-primary-800`;
@@ -77,7 +77,7 @@ const Components = tw.div``;
 const Component = tw.div`mt-12 border rounded-lg bg-white`;
 const ComponentHeading = tw.div`px-8 py-5 border-b flex flex-col sm:flex-row justify-between items-center`;
 const ComponentName = tw.h6`text-lg`;
-const ComponentPreviewLink = tw.a`mt-4 sm:mt-0 text-primary-800 hocus:text-primary-900 transition duration-300 font-semibold flex items-center`;
+const ComponentPreviewLink = tw.a`mt-4 sm:mt-0 text-primary-800 focus:text-primary-900 transition duration-300 font-semibold flex items-center`;
 const ComponentContent = tw.div`flex justify-between overflow-hidden rounded-b-lg bg-gray-600 relative`;
 const ResizableBox = styled(Rnd)`
   ${tw`relative! bg-white pr-4`}

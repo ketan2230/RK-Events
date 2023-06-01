@@ -101,7 +101,6 @@ export default ({
 
   if (!testimonials || testimonials.length === 0) testimonials = defaultTestimonials;
 
-  // useState is used instead of useRef below because we want to re-render when sliderRef becomes available (not null)
   const [imageSliderRef, setImageSliderRef] = useState(null);
   const [textSliderRef, setTextSliderRef] = useState(null);
 

@@ -43,7 +43,7 @@ background: linear-gradient(135deg, rgba(76,81,191,1) 0%, rgba(102,126,234,1) 10
         ${tw`text-gray-300!`}
       }
       ${BuyNowButton} {
-        ${tw`bg-gray-100 text-primary-800 hocus:bg-gray-300 hocus:text-primary-800`}
+        ${tw`bg-gray-100 text-primary-800 focus:bg-gray-300 focus:text-primary-800`}
     `}
 `;
 
@@ -74,7 +74,7 @@ const PlanFeatures = styled.div`
 
 const PlanAction = tw.div`px-4 sm:px-8 xl:px-16 py-8`;
 const BuyNowButton = styled(PrimaryButtonBase)`
-  ${tw`rounded-full uppercase tracking-wider py-4 w-full text-sm hover:shadow-xl transform hocus:translate-x-px hocus:-translate-y-px focus:shadow-outline`}
+  ${tw`rounded-full uppercase tracking-wider py-4 w-full text-sm hover:shadow-xl transform focus:translate-x-px focus:-translate-y-px focus:shadow-outline`}
 `;
 
 const DecoratorBlob = styled(SvgDecoratorBlob)`

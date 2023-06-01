@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/email-illustration.svg";
+import Loader from "images/email-illustration.svg";
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -33,12 +34,11 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
-const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`
+const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8 items-center justify-center`
 
 export default ({
   heading = <>Feel free to <span tw="text-primary-800">get in touch</span><wbr /> with us.</>,
   description = "Please Provide all details which mentioned in form, so we can provide our best services to you",
-  submitButtonText = "Send",
   formAction = "#",
   formMethod = "get",
   textOnLeft = true,
@@ -46,13 +46,18 @@ export default ({
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
   const form = useRef();
+  const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e) => {
+    setIsLoading(true);
+    console.log("Call 1: ",isLoading)
     e.preventDefault();
     console.log(form.current);
     emailjs.sendForm('service_o72ffxs', 'template_dde44iz', form.current, 'bKkL5Ani3e2QNWqfd')
-      .then((result) => {
+    .then((result) => {
+        console.log("Call : ",isLoading)
         if (result) {
+          setIsLoading(false);
           toast.success("Your details are submited Successfully",{
             style: {
               backgroundColor: '#5011CC',
@@ -78,13 +83,14 @@ export default ({
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
             <Form action={formAction} ref={form} onSubmit={sendEmail}>
-              <Input type="text" name="from_name" placeholder="Full Name" required />
-              <Input type="number" name="contact" placeholder="Contact Number" required />
-              <Input type="email" name="reply_to" placeholder="Your Email Address" required />
-              <Input type="text" name="occasion" placeholder="Ocassion" required />
+              <Input type="text" name="from_name" placeholder="Full Name" />
+              <Input type="number" name="contact" placeholder="Contact Number" />
+              <Input type="email" name="reply_to" placeholder="Your Email Address" />
+              <Input type="text" name="occasion" placeholder="Ocassion" />
               <Input type="date" name="event_date" placeholder="Date" />
-              <Textarea name="requirenment" placeholder="requirements, venue and Etc. " required />
-              <SubmitButton type="submit">{submitButtonText}</SubmitButton>
+              <Textarea name="requirenment" placeholder="requirements, venue and Etc. " />
+              {isLoading ? <SubmitButton type="submit"><Loader /></SubmitButton> : <SubmitButton type="submit">Create Inquiry</SubmitButton>}
+              {/* <SubmitButton type="submit">{isLoading ? 'Processing' : 'Create Inquiry'}</SubmitButton> */}
             </Form>
           </TextContent>
         </TextColumn>
