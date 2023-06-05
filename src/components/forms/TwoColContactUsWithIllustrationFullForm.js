@@ -49,6 +49,7 @@ export default ({
 
   const sendEmail = (e) => {
     e.preventDefault();
+    submitButtonText = "Sending..."
     console.log(form.current);
     emailjs.sendForm('service_o72ffxs', 'template_dde44iz', form.current, 'bKkL5Ani3e2QNWqfd')
       .then((result) => {
@@ -59,8 +60,10 @@ export default ({
               width: '350px'
             },
           });
+          submitButtonText = "Sending..."
         } else {
           toast.error("Something went wrong !");
+          submitButtonText = "Send"
         }
       }, (error) => {
         console.log(error.text);

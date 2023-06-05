@@ -10,6 +10,7 @@ import Themes from "components/cards/TabCardGrid.js";
 import Reviews from "components/testimonials/TwoColumnWithImage";
 import MainStickyHeader from "components/headers/MainStickyHeader";
 import Footer from "components/footers/MiniCenteredFooter";
+import GoToTop from "components/footers/GoToTop";
 import Event from "pages/Event.js"
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -35,6 +36,7 @@ export default function App() {
           <Route path="/event/:id" element={<Event />} />
         </Routes>
       </Router>
+      <GoToTop />
       <Footer />
     </>
   );

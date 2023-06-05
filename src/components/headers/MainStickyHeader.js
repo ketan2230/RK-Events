@@ -22,7 +22,7 @@ const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const StyledHeader = styled(Header)`
   ${tw`sm:py-2 py-0 max-w-none w-full bg-black absolute px-5 z-30`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-    ${tw`text-gray-100 hover:text-yellow-500 hover:shadow-md hover:transform hover:transition duration-300 cursor-pointer`}
+    ${tw`text-gray-100 hover:text-yellow-400 hover:shadow-md hover:transform hover:transition duration-300 cursor-pointer`}
   }
   ${NavToggle}.closed {
     ${tw`text-gray-100 hover:text-primary-500`}
@@ -39,21 +39,21 @@ const HeaderContent = styled.div`
 
 const SocialLinksContainer = tw.div`my-2 sm:my-1 mx-auto sm:mx-0 sm:justify-end flex w-full`;
 const ContactContainer = tw.div`hidden my-1 mt-1 ml-4 sm:flex items-center`;
-const Details = tw.div`text-gray-100 hover:text-yellow-500 transition cursor-pointer duration-300 mx-2`;
+const Details = tw.div`text-gray-100 hover:text-yellow-400 transition cursor-pointer duration-300 mx-2`;
 const SocialLinkContact = styled.a`
-  ${tw`cursor-pointer flex items-center text-gray-100 hover:text-yellow-500 transition duration-300 mx-4 font-mono sm:w-full`}
+  ${tw`cursor-pointer flex items-center text-gray-100 hover:text-yellow-400 transition duration-300 mx-4 font-mono sm:w-full`}
   svg {
     ${tw`w-5 h-5`}
   }
 `;
 const SocialLinkContactMobile = styled.a`
-  ${tw`cursor-pointer flex sm:hidden hover:shadow-md hover:transform hover:transition duration-300 items-center text-gray-100 hover:text-yellow-500 transition duration-300 mx-4 font-mono sm:w-full`}
+  ${tw`cursor-pointer flex sm:hidden hover:shadow-md hover:transform hover:transition duration-300 items-center text-gray-100 hover:text-yellow-400 transition duration-300 mx-4 font-mono sm:w-full`}
   svg {
     ${tw`w-5 h-5`}
   }
 `;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block hover:shadow-md hover:transform hover:transition duration-300 text-gray-100 hover:text-yellow-500 transition duration-300 mx-auto sm:mx-4`}
+  ${tw`cursor-pointer inline-block hover:shadow-md hover:transform hover:transition duration-300 text-gray-100 hover:text-yellow-400 transition duration-300 mx-auto sm:mx-4`}
   svg {
     ${tw`w-5 h-5`}
   }
@@ -89,7 +89,7 @@ const MainStickyHeader = () => {
           </SocialLinkContact>
         </ContactContainer>
         <SocialLinksContainer>
-          <SocialLinkContactMobile href="tel:+918488824036" target="_">
+          <SocialLinkContactMobile href="tel:+918488824036">
             <CallIcon />
           </SocialLinkContactMobile>
           <SocialLinkContactMobile href="mailto:rkevents17@gmail.com" target="_">

@@ -8,6 +8,8 @@ import { ReactComponent as GoogleIcon } from "../../images/google-icon1.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 import { ReactComponent as InstagramIcon } from "../../images/instagram-icon.svg";
 import { ReactComponent as WhatsAppIcon } from "../../images/whatsapp.svg";
+import { ReactComponent as CallIcon } from "../../images/call.svg";
+import { ReactComponent as Email } from "../../images/email.svg";
 // import { useNavigate } from "react-router-dom";
 
 const Container = tw(ContainerBase)`bg-black text-gray-100 bottom-0 w-full`;
@@ -52,6 +54,12 @@ export default () => {
           <NavLink href="/teamsCondition">Tearms & Condition</NavLink>
           </LinksContainer>
           <SocialLinksContainer>
+            <SocialLink href="tel:+918488824036">
+              <CallIcon />
+            </SocialLink>
+            <SocialLink href="mailto:rkevents17@gmail.com" target="_">
+              <Email />
+            </SocialLink>
             <SocialLink href="https://www.facebook.com/people/RK-Events/100063812500363/" target="_">
               <FacebookIcon />
             </SocialLink>
