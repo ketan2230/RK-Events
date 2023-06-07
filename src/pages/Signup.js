@@ -80,7 +80,7 @@ export default ({
       <Content>
         <MainContainer>
           <LogoLink href={logoLinkUrl}>
-            <LogoImage src={logo} />
+            <LogoImage src={logo} alt="Logo" />
           </LogoLink>
           <MainContent>
             <Heading>{headingText}</Heading>
@@ -89,7 +89,7 @@ export default ({
                 {socialButtons.map((socialButton, index) => (
                   <SocialButton key={index} href={socialButton.url}>
                     <span className="iconContainer">
-                      <img src={socialButton.iconImageSrc} className="icon" alt="" />
+                      <img src={socialButton.iconImageSrc} className="icon" alt="image" />
                     </span>
                     <span className="text">{socialButton.text}</span>
                   </SocialButton>

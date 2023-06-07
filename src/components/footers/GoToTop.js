@@ -2,13 +2,6 @@ import React, { useState } from 'react';
 import tw, { styled } from 'twin.macro';
 import { ReactComponent as Arrow } from "../../images/arrow.svg";
 
-// Styled components
-const FooterContainer = tw.footer`
-  // Add your footer styles here
-  // Example styles
-  bg-gray-200 py-4 px-4
-`;
-
 const GoToTopButton = styled.button`
   ${tw`fixed text-white py-2 px-2 rounded-full`}
   transition: opacity 0.4s, background-color 0.4s, border 0.4s;
@@ -51,12 +44,9 @@ const GoToTop = () => {
   }, []);
 
   return (
-    <FooterContainer>
-      {/* Content */}
       <GoToTopButton isVisible={showButton} onClick={goToTop}>
         <Arrow />
       </GoToTopButton>
-    </FooterContainer>
   );
 };
 

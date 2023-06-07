@@ -48,8 +48,7 @@ export default ({
     </>
   ),
   description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
+  primaryButtonUrl = "/contactUs",
   buttonRounded = true,
   imageRounded = true,
   imageBorder = false,
@@ -65,7 +64,7 @@ export default ({
     <Container>
       <TwoColumn>
         <ImageColumn>
-          <Image css={imageCss} src={TeamIllustrationSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded}/>
+          <Image css={imageCss} src={TeamIllustrationSrc} imageBorder={imageBorder} imageShadow={imageShadow} imageRounded={imageRounded} alt="Image" />
           {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
@@ -74,7 +73,7 @@ export default ({
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
             <PrimaryButton buttonRounded={buttonRounded} as="a" href={primaryButtonUrl}>
-              {"Book Your Date"}
+              {"Create Inquiry"}
             </PrimaryButton>
           </TextContent>
         </TextColumn>

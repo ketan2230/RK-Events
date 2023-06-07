@@ -70,7 +70,7 @@ const navLinks = [
     <NavLink href="/teamsCondition">Terms & Condition</NavLink>
   </NavLinks>,
   <NavLinks key={2}>
-    <PrimaryLink>Book Your Date</PrimaryLink>
+    <PrimaryLink>Create Inquiry</PrimaryLink>
   </NavLinks>,
 ];
 

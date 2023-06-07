@@ -47,7 +47,7 @@ export default () => {
         <FiveColumns>
           <CompanyColumn>
             <LogoContainer>
-              <LogoImg src={LogoImage} />
+              <LogoImg src={LogoImage} alt="Image" />
               <LogoText>Treact Inc.</LogoText>
             </LogoContainer>
             <CompanyAddress>

@@ -138,7 +138,7 @@ export default ({
         <Content2Xl>
           <NavRow>
             <LogoLink href="/">
-              <img src={logo} alt="" />
+              <img src={logo} alt="Logo" />
               Treact
             </LogoLink>
             <div tw="flex flex-wrap justify-center lg:justify-end items-center -mr-12">
@@ -185,7 +185,7 @@ export default ({
             </TextColumn>
             <ImageColumn>
               <ImageContainer>
-                <Image src={heroScreenshotImageSrc} />
+                <Image src={heroScreenshotImageSrc} alt={heroScreenshotImageSrc} />
               </ImageContainer>
             </ImageColumn>
           </HeroRow>

@@ -110,7 +110,7 @@ export default () => {
                   animate="rest"
                 >
                   <CardImageContainer>
-                    <CardImage src={card.imageSrc} />
+                    <CardImage src={card.imageSrc} alt={card.title} />
                     {/* <CardRatingContainer>
                       <CardRating>
                         <StarIcon />
