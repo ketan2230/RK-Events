@@ -2,7 +2,7 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { Container as ContainerBase } from "components/misc/Layouts.js";
-import logo from "../../images/logoWhite.png";
+import logo from "../../images/logo32.png";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as GoogleIcon } from "../../images/google-icon1.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
