@@ -3,7 +3,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
-import { PrimaryButton as SubmitButton } from "components/misc/Buttons.js";
+// import { PrimaryButton as SubmitButton } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/emailIllustration.svg";
 // import Loader from "images/emailIllustration.svg";
 import emailjs from '@emailjs/browser';
@@ -34,19 +34,19 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
-// const SubmitButton = styled.button`
-//   ${tw`text-white py-2 px-2 mt-6`}
-//   transition: opacity 0.4s, background-color 0.4s, border 0.4s;
-//   color: white;
-//   background: #facc15;
-//   font-weight: 600;
-//   border: 3px solid #facc15;
+const SubmitButton = styled.button`
+  ${tw`text-white bg-primary-800 py-2 px-2 mt-6`}
+  transition: opacity 0.4s, background-color 0.4s, border 0.4s;
+  color: white;
+  font-weight: 600;
+  border: 3px solid #460fb3;
+  border-radius: 10px;
 
-//   &:hover {
-//     background-color: transparent;
-//     color: #facc15;
-//   }
-// `;
+  &:hover {
+    background-color: transparent;
+    color: #460fb3;
+  }
+`;
 
 export default ({
   heading = <>Feel free to <span tw="text-primary-800">get in touch</span><wbr /> with us.</>,
