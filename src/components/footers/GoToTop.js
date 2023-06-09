@@ -7,8 +7,8 @@ const GoToTopButton = styled.button`
   transition: opacity 0.4s, background-color 0.4s, border 0.4s;
   z-index: 999;
   color: white;
-  bottom: 12px;
-  right: 12px;
+  bottom: 20px;
+  right: 20px;
   background: #facc15;
   border: 3px solid #facc15;
 

@@ -3,9 +3,9 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import EmailIllustrationSrc from "images/email-illustration.svg";
-import Loader from "images/email-illustration.svg";
+// import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
+import EmailIllustrationSrc from "images/emailIllustration.svg";
+// import Loader from "images/emailIllustration.svg";
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -34,7 +34,19 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
-const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8 items-center justify-center`
+const SubmitButton = styled.button`
+  ${tw`text-white py-2 px-2 mt-6`}
+  transition: opacity 0.4s, background-color 0.4s, border 0.4s;
+  color: white;
+  background: #facc15;
+  font-weight: 600;
+  border: 3px solid #facc15;
+
+  &:hover {
+    background-color: transparent;
+    color: #facc15;
+  }
+`;
 
 export default ({
   heading = <>Feel free to <span tw="text-primary-800">get in touch</span><wbr /> with us.</>,
@@ -89,8 +101,7 @@ export default ({
               <Input type="text" name="occasion" placeholder="Ocassion" />
               <Input type="date" name="event_date" placeholder="Date" />
               <Textarea name="requirenment" placeholder="requirements, venue and Etc. " />
-              {isLoading ? <SubmitButton type="submit"><Loader /></SubmitButton> : <SubmitButton type="submit">Create Inquiry</SubmitButton>}
-              {/* <SubmitButton type="submit">{isLoading ? 'Processing' : 'Create Inquiry'}</SubmitButton> */}
+              {isLoading ? <SubmitButton type="submit">Processing...</SubmitButton> : <SubmitButton type="submit">Create Inquiry</SubmitButton>}
             </Form>
           </TextContent>
         </TextColumn>
