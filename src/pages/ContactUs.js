@@ -35,16 +35,16 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
 `
 
 const SubmitButton = styled.button`
-  ${tw`text-white bg-primary-800 py-2 px-2 mt-6`}
+  ${tw`text-white py-2 px-2 mt-6`}
   transition: opacity 0.4s, background-color 0.4s, border 0.4s;
-  color: white;
   font-weight: 600;
+  background: #460fb3 !important;
   border: 3px solid #460fb3;
   border-radius: 10px;
 
   &:hover {
-    background-color: transparent;
-    color: #460fb3;
+    background: transparent !important;
+    color: #460fb3 !important;
   }
 `;
 
@@ -55,7 +55,6 @@ export default ({
   formMethod = "get",
   textOnLeft = true,
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
 
   const form = useRef();
   const [isLoading, setIsLoading] = useState(false);

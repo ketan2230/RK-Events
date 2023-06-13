@@ -25,7 +25,7 @@ const NavLink = tw.a`font-mono hover:text-gray-500 transition duration-300 mt-2 
 
 const SocialLinksContainer = tw.div`mt-10`;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 mx-4`}
+  ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 sm:mx-4 mx-2`}
   svg {
     ${tw`w-5 h-5`}
   }

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import tw from "twin.macro";
+import tw from 'twin.macro';
 import styled from "styled-components";
 // import { Link } from 'react-router-dom';
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -27,6 +27,12 @@ export const NavLink = tw.a`
   font-semibold tracking-wide transition duration-300
   pb-1 hover:text-yellow-400
 `;
+
+// export const NavLink = styled(Link)`
+// ${tw`text-lg my-2 lg:text-sm lg:mx-6 lg:my-0 cursor-pointer
+//   font-semibold tracking-wide transition duration-300
+//   pb-1 hover:text-yellow-400`}
+// `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
