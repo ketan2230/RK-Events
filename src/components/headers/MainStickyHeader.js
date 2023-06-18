@@ -22,6 +22,9 @@ const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const StyledHeader = styled(Header)`
   ${tw`sm:py-2 py-0 max-w-none w-full bg-black absolute px-5 z-30`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
+    .active {
+      ${tw`text-yellow-400`}
+    }
     ${tw`text-gray-100 hover:text-yellow-400 hover:shadow-md hover:transform hover:transition duration-300 cursor-pointer`}
   }
   ${NavToggle}.closed {
@@ -61,13 +64,13 @@ const SocialLink = styled.a`
 
 const navLinks = [
   <NavLinks key={1}>
-    <NavLink href="/">Home</NavLink>
-    <NavLink href="/aboutUs">About Us</NavLink>
-    <NavLink href="/themes">Themes</NavLink>
-    <NavLink href="/features">Features</NavLink>
-    <NavLink href="/reviews">Reviews</NavLink>
-    <NavLink href="/contactUs">Contact Us</NavLink>
-    <NavLink href="/teamsCondition">Terms & Condition</NavLink>
+    <NavLink href="/"><span className={window.location.pathname === '/' ? 'active' : ''}>Home</span></NavLink>
+    <NavLink href="/aboutUs" ><span className={window.location.pathname === '/aboutUs' ? 'active' : ''}>About Us</span></NavLink>
+    <NavLink href="/themes"><span className={window.location.pathname === '/themes' ? 'active' : ''}>Themes</span></NavLink>
+    <NavLink href="/features"><span className={window.location.pathname === '/features' ? 'active' : ''}>Features</span></NavLink>
+    <NavLink href="/reviews"><span className={window.location.pathname === '/reviews' ? 'active' : ''}>Reviews</span></NavLink>
+    <NavLink href="/contactUs"><span className={window.location.pathname === '/contactUs' ? 'active' : ''}>Contact Us</span></NavLink>
+    <NavLink href="/teamsCondition"><span className={window.location.pathname === '/teamsCondition' ? 'active' : ''}>Terms & Condition</span></NavLink>
   </NavLinks>,
   <NavLinks key={2}>
     <PrimaryLink href="/contactUs">Create Inquiry</PrimaryLink>
