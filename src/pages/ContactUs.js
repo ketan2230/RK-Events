@@ -3,7 +3,6 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
-// import { PrimaryButton as SubmitButton } from "components/misc/Buttons.js";
 import EmailIllustrationSrc from "images/emailIllustration.svg";
 // import Loader from "images/emailIllustration.svg";
 import emailjs from '@emailjs/browser';

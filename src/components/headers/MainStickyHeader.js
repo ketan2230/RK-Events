@@ -10,14 +10,12 @@ import { ReactComponent as Email } from "../../images/email.svg";
 import Header, {
   NavLink,
   NavLinks,
-  PrimaryLink as PrimaryLinkBase,
   LogoLink,
   NavToggle,
   DesktopNavLinks,
 } from "../headers/light.js";
 // import logo from "../../images/logoWhite.png";
 
-const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 
 const StyledHeader = styled(Header)`
   ${tw`sm:py-2 py-0 max-w-none w-full bg-black absolute px-5 z-30`}
@@ -50,7 +48,7 @@ const SocialLinkContact = styled.a`
   }
 `;
 const SocialLinkContactMobile = styled.a`
-  ${tw`cursor-pointer flex sm:hidden hover:shadow-md hover:transform hover:transition duration-300 items-center text-gray-100 hover:text-yellow-400 transition duration-300 mx-4 font-mono sm:w-full`}
+  ${tw`cursor-pointer inline-block sm:hidden hover:shadow-md hover:transform hover:transition duration-300 text-gray-100 hover:text-yellow-400 transition duration-300 mx-auto sm:mx-4`}
   svg {
     ${tw`w-5 h-5`}
   }
@@ -71,9 +69,6 @@ const navLinks = [
     <NavLink href="/reviews"><span className={window.location.pathname === '/reviews' ? 'active' : ''}>Reviews</span></NavLink>
     <NavLink href="/contactUs"><span className={window.location.pathname === '/contactUs' ? 'active' : ''}>Contact Us</span></NavLink>
     <NavLink href="/teamsCondition"><span className={window.location.pathname === '/teamsCondition' ? 'active' : ''}>Terms & Condition</span></NavLink>
-  </NavLinks>,
-  <NavLinks key={2}>
-    <PrimaryLink href="/contactUs">Create Inquiry</PrimaryLink>
   </NavLinks>,
 ];
 

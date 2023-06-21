@@ -31,7 +31,7 @@ const Container = styled.div`
   ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144 mt-16 sm:mt-0`}
 `;
 
-const OpacityOverlay = tw.div`absolute inset-0 bg-black opacity-75`;
+const OpacityOverlay = tw.div`absolute inset-0 bg-black opacity-50`;
 
 const HeroContainer = tw.div`relative mx-auto h-full flex flex-col`;
 const Content = tw.div`px-4 flex flex-1 flex-col justify-center items-center w-full`;

@@ -55,6 +55,10 @@ export const LogoLink = styled(NavLink)`
   }
 `;
 
+const LogoText = tw.div`
+hidden sm:block
+`
+
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
   lg:hidden z-20 focus:outline-none focus:text-primary-800 transition duration-300
@@ -113,7 +117,7 @@ export default ({
   const defaultLogoLink = (
     <LogoLink href="/">
       <img src={logo} alt="logo" />
-      RK EVENTS
+      <LogoText>RK EVENTS</LogoText>
     </LogoLink>
   );
 

@@ -5,8 +5,8 @@ import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
 import { SectionHeading } from "components/misc/Headings.js";
-import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
-import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
+// import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
+// import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
 import { useNavigate } from "react-router-dom";
 import Data from "data/events.json"
 
@@ -45,12 +45,12 @@ const CardText = tw.div`p-4 text-gray-900`;
 const CardTitle = tw.h5`text-lg font-semibold group-hover:text-primary-800`;
 const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;
 
-const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
-  ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-64 w-64 opacity-15 transform translate-x-2/3 -translate-y-12 text-pink-400`}
-`;
-const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-  ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-primary-800`}
-`;
+// const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
+//   ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-64 w-64 opacity-15 transform translate-x-2/3 -translate-y-12 text-pink-400`}
+// `;
+// const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
+//   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-primary-800`}
+// `;
 
 export default () => {
   /*
@@ -144,8 +144,8 @@ export default () => {
           </TabContent>
         ))}
       </ContentWithPaddingXl>
-      <DecoratorBlob1 />
-      <DecoratorBlob2 />
+      {/* <DecoratorBlob1 /> */}
+      {/* <DecoratorBlob2 /> */}
     </Container>
   );
 };
