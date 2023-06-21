@@ -1,32 +1,11 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { useState, useEffect } from "react";
 import Data from "data/events.json";
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-// import Header, {
-//   NavLink,
-//   NavLinks,
-//   PrimaryLink as PrimaryLinkBase,
-//   LogoLink,
-//   NavToggle,
-//   DesktopNavLinks,
-// } from "../headers/light.js";
-
-// const StyledHeader = styled(Header)`
-//   ${tw`pt-5 max-w-none w-full absolute px-5 z-30`}
-//   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
-//     ${tw`text-gray-100 hover:border-gray-300 hover:text-gray-300 cursor-pointer`}
-//   }
-//   ${NavToggle}.closed {
-//     ${tw`text-gray-100 hover:text-primary-500`}
-//   }
-// `;
-
-// const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`;
 const Container = styled.div`
   ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144 mt-16 sm:mt-0`}
 `;
@@ -41,38 +20,8 @@ const Heading = styled.h1`
 `;
 
 export default () => {
-  // const navLinks = [
-  //   <NavLinks key={1}>
-  //     <NavLink onClick={() => gotoAbout()}>About</NavLink>
-  //     <NavLink onClick={() => gotoThemes()}>Themes</NavLink>
-  //     <NavLink onClick={() => gotoFeatures()}>Features</NavLink>
-  //     <NavLink onClick={() => gotoReview()}>Reviews</NavLink>
-  //     <NavLink href="/contactUs">Contact Us</NavLink>
-  //     <NavLink>Tearms & Condition</NavLink>
-  //   </NavLinks>,
-  //   <NavLinks key={2}>
-  //     <PrimaryLink>Book Your Date</PrimaryLink>
-  //   </NavLinks>,
-  // ];
 
   const bgImages = Data.mainPageImagesSlogan;
-
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    if (offset > 200) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-    console.log(scrolled);
-  };
-
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-  });
-
   const optionsOwl = {
     items: 1,
     loop: true,
@@ -85,7 +34,6 @@ export default () => {
   return (
     <Container>
       <HeroContainer>
-        {/* <StyledHeader links={navLinks} /> */}
         <OwlCarousel className="owl-theme" {...optionsOwl}>
           {bgImages.map((item) => {
             return (
@@ -110,7 +58,6 @@ export default () => {
                   >
                     {item.slogan}
                   </Heading>
-                  {/* <PrimaryAction>Explore Themes</PrimaryAction> */}
                 </Content>
               </div>
             );
