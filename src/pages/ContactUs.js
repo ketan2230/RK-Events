@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -33,8 +33,9 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
+
 const SubmitButton = styled.button`
-  ${tw`text-white py-2 px-2 mt-6`}
+${tw`text-white py-2 px-2 mt-6`}
   transition: opacity 0.4s, background-color 0.4s, border 0.4s;
   font-weight: 600;
   background: #460fb3 !important;
@@ -54,18 +55,22 @@ export default ({
   formMethod = "get",
   textOnLeft = true,
 }) => {
-
+  
   const form = useRef();
+
+  useEffect(() => {
+    const currentDate = new Date();
+    currentDate.setDate(currentDate.getDate() + 2);
+    document.getElementById("event_date").min = currentDate.toISOString().split("T")[0];
+  }, []);
+
   const [isLoading, setIsLoading] = useState(false);
 
   const sendEmail = (e) => {
     setIsLoading(true);
-    console.log("Call 1: ",isLoading)
     e.preventDefault();
-    console.log(form.current);
     emailjs.sendForm('service_o72ffxs', 'template_dde44iz', form.current, 'bKkL5Ani3e2QNWqfd')
     .then((result) => {
-        console.log("Call : ",isLoading)
         if (result) {
           setIsLoading(false);
           toast.success("Your details are submited Successfully",{
@@ -93,12 +98,13 @@ export default ({
             <Heading>{heading}</Heading>
             {description && <Description>{description}</Description>}
             <Form action={formAction} ref={form} onSubmit={sendEmail}>
-              <Input type="text" name="from_name" placeholder="Full Name" />
-              <Input type="number" name="contact" placeholder="Contact Number" />
-              <Input type="email" name="reply_to" placeholder="Your Email Address" />
-              <Input type="text" name="occasion" placeholder="Ocassion" />
-              <Input type="date" name="event_date" placeholder="Date" />
-              <Textarea name="requirenment" placeholder="requirements, venue and Etc. " />
+              <Input type="text" name="from_name" placeholder="Full Name" required />
+              {/* <Input type="number" name="contact" placeholder="Contact Number" value={contactNumber} required  /> */}
+              <Input type="text" name="contact" placeholder="Contact Number" title="Ex:- 1234567890" pattern="[1-9]{1}[0-9]{9}" required maxlength="10" minLength="10" />
+              <Input type="email" name="reply_to" placeholder="Your Email Address" required />
+              <Input type="text" name="occasion" placeholder="Ocassion" required />
+              <Input type="date" name="event_date" id="event_date" placeholder="Date" required />
+              <Textarea name="requirenment" placeholder="requirements, venue and Etc." required />
               <SubmitButton type="submit" tw="mt-6">{isLoading ? 'Processing...' : 'Create Inquiry'}</SubmitButton>
             </Form>
           </TextContent>
