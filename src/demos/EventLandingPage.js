@@ -1,4 +1,4 @@
-import AnimationRevealPage from "helpers/AnimationRevealPage";
+// import AnimationRevealPage from "helpers/AnimationRevealPage";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/TwoColumnWithImage";
 import ContactUsForm from "pages/ContactUs";
@@ -19,7 +19,8 @@ export default () => {
   const imageCss = tw`rounded-4xl`;
 
   return (
-    <AnimationRevealPage>
+    // <AnimationRevealPage>
+    <div>
       <Hero />
       <MainFeature
         id="about"
@@ -90,6 +91,7 @@ export default () => {
       />
       <Testimonial />
       <ContactUsForm />
-    </AnimationRevealPage>
+      </div>
+    // </AnimationRevealPage>
   );
 };
