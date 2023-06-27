@@ -7,7 +7,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Container = styled.div`
-  ${tw`relative -mx-8 bg-center bg-cover h-screen min-h-144 mt-16 sm:mt-0`}
+  ${tw`relative bg-center bg-cover h-screen min-h-144 sm:mt-0`}
 `;
 
 const OpacityOverlay = tw.div`absolute inset-0 bg-black opacity-50`;

@@ -18,7 +18,7 @@ import Header, {
 
 
 const StyledHeader = styled(Header)`
-  ${tw`sm:py-2 py-0 max-w-none w-full bg-black absolute px-5 z-30`}
+  ${tw`sm:py-2 py-0 max-w-none w-full bg-black relative px-5 z-30`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     .active {
       ${tw`text-yellow-400`}
@@ -31,7 +31,7 @@ const StyledHeader = styled(Header)`
 `;
 
 const HeaderContainer = styled.header`
-  ${tw`fixed top-0 w-full bg-black text-white z-50`}
+  ${tw`sticky top-0 w-full bg-black text-white z-50`}
 `;
 
 const HeaderContent = styled.div`

@@ -1,15 +1,17 @@
 import React from 'react';
 import tw from 'twin.macro';
 import styled from 'styled-components';
+import { Container } from "components/misc/Layouts.js";
 
 // Styles
-const Container = styled.div`
-  ${tw`flex flex-col items-center justify-center h-screen`}
-`;
 
 const Title = styled.h1`
   ${tw`text-4xl font-bold mb-4`}
 `;
+
+const Contain = styled(Container)`
+  ${tw`py-12`}
+`
 
 const Condition = styled.div`
   ${tw`flex items-center mb-2`}
@@ -32,7 +34,7 @@ const TeamsAndConditions = () => {
   ];
 
   return (
-    <Container>
+    <Contain>
       <Title>Teams & Conditions</Title>
       {conditions.map((condition, index) => (
         <Condition key={index}>
@@ -40,7 +42,7 @@ const TeamsAndConditions = () => {
           <ConditionText>{condition}</ConditionText>
         </Condition>
       ))}
-    </Container>
+    </Contain>
   );
 };
 
