@@ -13,7 +13,7 @@ import { ReactComponent as Email } from "../../images/email.svg";
 // import { useNavigate } from "react-router-dom";
 
 const Container = tw(ContainerBase)`bg-black text-gray-100 bottom-0 w-full`;
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
+const Content = tw.div`max-w-screen-xl mx-auto py-12`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`;
 
