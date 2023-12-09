@@ -27,6 +27,33 @@
   }
 }
 
+.recent-event-story-section {
+  .recent-event-story-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 220px);
+    gap: 16px;
+    .recent-event-story-img01 { grid-area: 1 / 1 / 3 / 2; }
+    .recent-event-story-img02 { grid-area: 1 / 2 / 2 / 3; }
+    .recent-event-story-img03 { grid-area: 1 / 3 / 2 / 4; }
+    .recent-event-story-img04 { grid-area: 2 / 2 / 3 / 4; }
+    .recent-event-story-img05 { grid-area: 1 / 4 / 2 / 5; }
+    .recent-event-story-img06 { grid-area: 2 / 4 / 3 / 5; }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      max-width: unset;
+      border-radius: 5px;
+    }
+  }
+}
+
+.common-section-gap {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 @media screen and (max-width: 1200px) {
   .feature-wrapper {
     padding: 60px !important;

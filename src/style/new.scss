@@ -1,6 +1,6 @@
 .container {
-    background-color: rgb(241, 241, 241);
-    padding: 80px 300px;
+    // background-color: rgb(241, 241, 241);
+    // padding: 80px 300px;
     text-align: left;
     display: flex;
   
@@ -10,12 +10,17 @@
   
       .main-header {
         font-size: 48px;
+        font-weight: 500;
+        line-height: 1.4;
         margin: 0;
+        width: min(100% , 500px);
       }
   
       .sub-header {
         font-size: 16px;
-        margin-bottom: 14px;
+        margin-bottom: 10px;
+        font-weight: 400;
+        color: rgb(70 15 179);
       }
   
       .description {
@@ -63,14 +68,14 @@
     height: 3px;
     width: 35px;
     margin-top: 20px;
-    background-color: red;
+    background-color: rgb(70 15 179);
   }
   
   .team-container {
-    padding: 80px 0;
+    // padding: 80px 0;
     text-align: center;
     justify-content: center;
-    background-color: rgb(214, 212, 212);
+    // background-color: rgb(214, 212, 212);
   
     .empty-block {
       margin: 0 auto;

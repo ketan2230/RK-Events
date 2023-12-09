@@ -63,6 +63,10 @@ export default () => {
   const navigate = useNavigate();
 
   return (
+    <>
+    <section className="main-image-wrapper">
+        <h1 className="page-title">Our Themes</h1>
+    </section>
     <Container>
       <ContentWithPaddingXl>
         <HeaderRow>
@@ -70,9 +74,9 @@ export default () => {
           <TabsControl>
             {tabsKeys.map((tabName, index) => (
               <TabControl
-                key={index}
-                active={activeTab === tabName}
-                onClick={() => setActiveTab(tabName)}
+              key={index}
+              active={activeTab === tabName}
+              onClick={() => setActiveTab(tabName)}
               >
                 {tabName}
               </TabControl>
@@ -82,8 +86,8 @@ export default () => {
         <SubHeader>{Data.subHeading}</SubHeader>
         {tabsKeys.map((tabKey, index) => (
           <TabContent
-            key={index}
-            variants={{
+          key={index}
+          variants={{
               current: {
                 opacity: 1,
                 scale: 1,
@@ -98,7 +102,7 @@ export default () => {
             transition={{ duration: 0.4 }}
             initial={activeTab === tabKey ? "current" : "hidden"}
             animate={activeTab === tabKey ? "current" : "hidden"}
-          >
+            >
             {Data.tabs[tabKey].map((card, index) => (
               <CardContainer key={index}>
                 <Card
@@ -113,8 +117,8 @@ export default () => {
                     <CardImage src={card.imageSrc} alt={card.title} />
                     {/* <CardRatingContainer>
                       <CardRating>
-                        <StarIcon />
-                        {card.rating}
+                      <StarIcon />
+                      {card.rating}
                       </CardRating>
                       <CardReview>({card.reviews})</CardReview>
                     </CardRatingContainer> */}
@@ -131,7 +135,7 @@ export default () => {
                       }}
                       transition={{ duration: 0.3 }}
                     >
-                      <CardButton>Buy Now</CardButton>
+                    <CardButton>Buy Now</CardButton>
                     </CardHoverOverlay> */}
                   </CardImageContainer>
                   <CardText>
@@ -147,5 +151,6 @@ export default () => {
       {/* <DecoratorBlob1 /> */}
       {/* <DecoratorBlob2 /> */}
     </Container>
+  </>
   );
 };

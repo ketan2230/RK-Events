@@ -75,6 +75,10 @@ export default () => {
    */
   const testimonials = Data.testimonials;
   return (
+    <>
+      <section className="main-image-wrapper">
+        <h1 className="page-title">Happy Customers</h1>
+      </section>
     <Container>
       <Content>
         <HeadingInfoContainer>
@@ -106,5 +110,6 @@ export default () => {
       <DecoratorBlob1 />
       {/* <DecoratorBlob2 /> */}
     </Container>
+    </>
   );
 };
