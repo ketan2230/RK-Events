@@ -56,36 +56,38 @@ const AboutUs = () => {
       </section>
 
       <div className="feature-wrapper">
-        <div className="card">
-          <InstagramIcon />
-          <div className="card-header">Served With love</div>
-          <div className="card-text">
-            Meet the most advanced live website builder on WordPress. Featuring
-            latest web technologies,enjoyable UX.
+        <div className="feature-container">
+          <div className="card">
+            <InstagramIcon />
+            <div className="card-header">Served With love</div>
+            <div className="card-text">
+              Meet the most advanced live website builder on WordPress. Featuring
+              latest web technologies,enjoyable UX.
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <InstagramIcon />
-          <div className="card-header">Served With love</div>
-          <div className="card-text">
-            Meet the most advanced live website builder on WordPress. Featuring
-            latest web technologies,enjoyable UX.
+          <div className="card">
+            <InstagramIcon />
+            <div className="card-header">Served With love</div>
+            <div className="card-text">
+              Meet the most advanced live website builder on WordPress. Featuring
+              latest web technologies,enjoyable UX.
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <InstagramIcon />
-          <div className="card-header">Served With love</div>
-          <div className="card-text">
-            Meet the most advanced live website builder on WordPress. Featuring
-            latest web technologies,enjoyable UX.
+          <div className="card">
+            <InstagramIcon />
+            <div className="card-header">Served With love</div>
+            <div className="card-text">
+              Meet the most advanced live website builder on WordPress. Featuring
+              latest web technologies,enjoyable UX.
+            </div>
           </div>
-        </div>
-        <div className="card">
-          <InstagramIcon />
-          <div className="card-header">Served With love</div>
-          <div className="card-text">
-            Meet the most advanced live website builder on WordPress. Featuring
-            latest web technologies,enjoyable UX.
+          <div className="card">
+            <InstagramIcon />
+            <div className="card-header">Served With love</div>
+            <div className="card-text">
+              Meet the most advanced live website builder on WordPress. Featuring
+              latest web technologies,enjoyable UX.
+            </div>
           </div>
         </div>
       </div>

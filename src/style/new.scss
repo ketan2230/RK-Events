@@ -82,16 +82,16 @@
     }
   
     .image-card-container {
-      width: 100%;
-      margin-top: 20px;
-      display: flex;
-  
+      width: min(90%,1200px);
+      margin: 0 auto;
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
       .image-card {
-        width: 25%;
-        padding: 30px 50px;
-  
         img {
           width: 100%;
+          border-radius: 6px;
         }
   
         .overlay {
@@ -123,25 +123,31 @@
   }
   
   .contact-container {
-    padding: 80px 250px;
-    text-align: center;
-    justify-content: center;
+    // padding: 80px 250px;
+    // text-align: center;
+    // justify-content: center;
     background-color: rgb(248, 248, 248);
   
     .image-card-container {
-      width: 100%;
-      margin-top: 20px;
-      display: flex;
-  
+      width: min(90%,1200px);
+      margin: 0 auto;
+      padding: 60px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
       .card {
-        width: 25%;
-        padding: 30px 50px;
+        padding: 15px 20px 20px;
+        display: grid;
+        gap: 10px;
+        background: white;
+        border-radius: 10px;
+        border: 1px solid #ececec;
+        text-align: center;
         .icon {
           font-size: 48px;
         }
         .title {
           font-size: 20px;
-          margin: 30px 0 10px;
           font-weight: 600;
         }
         .detail {
