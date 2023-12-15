@@ -36,7 +36,7 @@ const navLinks = [
     <NavLink href="/themes"><span className={window.location.pathname === '/themes' ? 'active' : ''}>Themes</span></NavLink>
     <NavLink href="/reviews"><span className={window.location.pathname === '/reviews' ? 'active' : ''}>Reviews</span></NavLink>
     <NavLink href="/contactUs"><span className={window.location.pathname === '/contactUs' ? 'active' : ''}>Contact Us</span></NavLink>
-    <NavLink href="/teamsCondition"><span className={window.location.pathname === '/teamsCondition' ? 'active' : ''}>Terms & Condition</span></NavLink>
+    {/* <NavLink href="/teamsCondition"><span className={window.location.pathname === '/teamsCondition' ? 'active' : ''}>Terms & Condition</span></NavLink> */}
   </NavLinks>,
 ];
 

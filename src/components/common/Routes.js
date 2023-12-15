@@ -1,19 +1,19 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import EventLandingPage from "demos/EventLandingPage.js";
-import TearmsAndCondition from "demos/TermsAndCondition";
+// import TearmsAndCondition from "demos/TermsAndCondition";
 import New from "pages/New";
 import ContactUsForm from "pages/ContactUs";
 import AboutUs from "pages/Aboutus";
 import Themes from "components/cards/TabCardGrid.js";
 import Reviews from "components/testimonials/TwoColumnWithImage";
 import Event from "pages/Event.js";
-import rupeeIcon from "images/icon/rupee.png";
-import editIcon from "images/icon/edit.png";
-import internateIcon from "images/icon/internate.png";
-import tw from "twin.macro";
+// import rupeeIcon from "images/icon/rupee.png";
+// import editIcon from "images/icon/edit.png";
+// import internateIcon from "images/icon/internate.png";
+// import tw from "twin.macro";
 
-const HighlightedText = tw.span`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+// const HighlightedText = tw.span`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
 const AppRoutes = () => {
   return (

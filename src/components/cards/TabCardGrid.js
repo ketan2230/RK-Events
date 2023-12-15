@@ -4,6 +4,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
+import Title from "components/common/Title.js"
 import { SectionHeading } from "components/misc/Headings.js";
 // import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 // import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
@@ -64,65 +65,63 @@ export default () => {
 
   return (
     <>
-    <section className="main-image-wrapper">
-        <h1 className="page-title">Our Themes</h1>
-    </section>
-    <Container>
-      <ContentWithPaddingXl>
-        <HeaderRow>
-          <Header>{Data.heading}</Header>
-          <TabsControl>
-            {tabsKeys.map((tabName, index) => (
-              <TabControl
-              key={index}
-              active={activeTab === tabName}
-              onClick={() => setActiveTab(tabName)}
-              >
-                {tabName}
-              </TabControl>
-            ))}
-          </TabsControl>
-        </HeaderRow>
-        <SubHeader>{Data.subHeading}</SubHeader>
-        {tabsKeys.map((tabKey, index) => (
-          <TabContent
-          key={index}
-          variants={{
-              current: {
-                opacity: 1,
-                scale: 1,
-                display: "flex",
-              },
-              hidden: {
-                opacity: 0,
-                scale: 0.8,
-                display: "none",
-              },
-            }}
-            transition={{ duration: 0.4 }}
-            initial={activeTab === tabKey ? "current" : "hidden"}
-            animate={activeTab === tabKey ? "current" : "hidden"}
-            >
-            {Data.tabs[tabKey].map((card, index) => (
-              <CardContainer key={index}>
-                <Card
-                  onClick={() => navigate(`event/${card.slug}`)}
-                  className="group"
-                  href={card.url}
-                  initial="rest"
-                  whileHover="hover"
-                  animate="rest"
+      <Title header="Our Themes" />
+      <Container>
+        <ContentWithPaddingXl>
+          <HeaderRow>
+            <Header>{Data.heading}</Header>
+            <TabsControl>
+              {tabsKeys.map((tabName, index) => (
+                <TabControl
+                  key={index}
+                  active={activeTab === tabName}
+                  onClick={() => setActiveTab(tabName)}
                 >
-                  <CardImageContainer>
-                    <CardImage src={card.imageSrc} alt={card.title} />
-                    {/* <CardRatingContainer>
+                  {tabName}
+                </TabControl>
+              ))}
+            </TabsControl>
+          </HeaderRow>
+          <SubHeader>{Data.subHeading}</SubHeader>
+          {tabsKeys.map((tabKey, index) => (
+            <TabContent
+              key={index}
+              variants={{
+                current: {
+                  opacity: 1,
+                  scale: 1,
+                  display: "flex",
+                },
+                hidden: {
+                  opacity: 0,
+                  scale: 0.8,
+                  display: "none",
+                },
+              }}
+              transition={{ duration: 0.4 }}
+              initial={activeTab === tabKey ? "current" : "hidden"}
+              animate={activeTab === tabKey ? "current" : "hidden"}
+            >
+              {Data.tabs[tabKey].map((card, index) => (
+                <CardContainer key={index}>
+                  <Card
+                    onClick={() => navigate(`event/${card.slug}`)}
+                    className="group"
+                    href={card.url}
+                    initial="rest"
+                    whileHover="hover"
+                    animate="rest"
+                  >
+                    <CardImageContainer>
+                      <CardImage src={card.imageSrc} alt={card.title} />
+                      {/* <CardRatingContainer>
                       <CardRating>
                       <StarIcon />
                       {card.rating}
                       </CardRating>
                       <CardReview>({card.reviews})</CardReview>
                     </CardRatingContainer> */}
-                    {/* <CardHoverOverlay
+                      {/* <CardHoverOverlay
                       variants={{
                         hover: {
                           opacity: 1,
@@ -137,20 +136,20 @@ export default () => {
                     >
                     <CardButton>Buy Now</CardButton>
                     </CardHoverOverlay> */}
-                  </CardImageContainer>
-                  <CardText>
-                    <CardTitle>{card.title}</CardTitle>
-                    <CardContent>{card.content}</CardContent>
-                  </CardText>
-                </Card>
-              </CardContainer>
-            ))}
-          </TabContent>
-        ))}
-      </ContentWithPaddingXl>
-      {/* <DecoratorBlob1 /> */}
-      {/* <DecoratorBlob2 /> */}
-    </Container>
-  </>
+                    </CardImageContainer>
+                    <CardText>
+                      <CardTitle>{card.title}</CardTitle>
+                      <CardContent>{card.content}</CardContent>
+                    </CardText>
+                  </Card>
+                </CardContainer>
+              ))}
+            </TabContent>
+          ))}
+        </ContentWithPaddingXl>
+        {/* <DecoratorBlob1 /> */}
+        {/* <DecoratorBlob2 /> */}
+      </Container>
+    </>
   );
 };

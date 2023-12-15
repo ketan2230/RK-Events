@@ -1,13 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
+// import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
 import EmailIllustrationSrc from "images/emailIllustration.svg";
 // import Loader from "images/emailIllustration.svg";
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Title from "components/common/Title.js"
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -55,7 +56,7 @@ export default ({
   formMethod = "get",
   textOnLeft = true,
 }) => {
-  
+
   const form = useRef();
 
   useEffect(() => {
@@ -70,10 +71,10 @@ export default ({
     setIsLoading(true);
     e.preventDefault();
     emailjs.sendForm('service_o72ffxs', 'template_dde44iz', form.current, 'bKkL5Ani3e2QNWqfd')
-    .then((result) => {
+      .then((result) => {
         if (result) {
           setIsLoading(false);
-          toast.success("Your details are submited Successfully",{
+          toast.success("Your details are submited Successfully", {
             style: {
               backgroundColor: '#5011CC',
               width: '350px'
@@ -89,40 +90,73 @@ export default ({
 
   return (
     <>
-
-    <section className="main-image-wrapper">
-      <h1 className="page-title">Contect US</h1>
-    </section>
-
-    <section>
-      <div className='contact-container'>
+      <Title header="CONTACT US" />
+      <section>
+        <div className='contact-container'>
           <div className='image-card-container'>
-              <div className='card'>
-                <i className="fa fa-phone icon"></i>
-                <p className='title'>PHONE</p>
-                <span className='detail'>+88 (0) 101 0000 000</span>
-              </div>
-              <div className='card'>
-                <i className="fa fa-map icon"></i>
-                <p className='title'>LOCATION</p>
-                <span className='detail'>198 West 21th Street, New York, NY 10010</span>
-              </div>
-              <div className='card'>
-                <i className="fa fa-envelope icon"></i>
-                <p className='title'>EMAIL</p>
-                <span className='detail'>rkevents17@gmail.com</span>
-              </div>
-              <div className='card'>
-                <i className="fa fa-fax icon"></i>
-                <p className='title'>SOCIAL</p>
-                <span className='detail'>+88 (0) 101 0000 000</span>
-              </div>
+            <div className='card'>
+              <i className="fa fa-phone icon"></i>
+              <p className='title'>PHONE</p>
+              <span className='detail'>+91 8488824036</span>
+            </div>
+            <div className='card'>
+              <i className="fa fa-map icon"></i>
+              <p className='title'>Office Address</p>
+              <span className='detail'>B-14, Janaki Apartment, nr Bhagwati School, Hirawadi, Ahmedabad</span>
+            </div>
+            <div className='card'>
+              <i className="fa fa-envelope icon"></i>
+              <p className='title'>EMAIL</p>
+              <span className='detail'>rkevents17@gmail.com</span>
+            </div>
+            <div className='card'>
+              <i className="fa fa-fax icon"></i>
+              <p className='title'>SOCIAL</p>
+              <span className='detail'>+88 (0) 101 0000 000</span>
+            </div>
           </div>
         </div>
-    </section>
+      </section>
 
-    <section className="google-map-section">
-      <div className='google-map'>
+      <Container>
+        <TwoColumn>
+          <ImageColumn>
+            <Image imageSrc={EmailIllustrationSrc} />
+          </ImageColumn>
+          <TextColumn textOnLeft={textOnLeft}>
+            <TextContent>
+              <Heading>{heading}</Heading>
+              {description && <Description>{description}</Description>}
+              <Form action={formAction} ref={form} onSubmit={sendEmail}>
+                <Input type="text" name="from_name" placeholder="Full Name" required />
+                {/* <Input type="number" name="contact" placeholder="Contact Number" value={contactNumber} required  /> */}
+                <Input type="text" name="contact" placeholder="Contact Number" title="Ex:- 1234567890" pattern="[1-9]{1}[0-9]{9}" required maxlength="10" minLength="10" />
+                <Input type="email" name="reply_to" placeholder="Your Email Address" required />
+                <Input type="text" name="occasion" placeholder="Ocassion" required />
+                <Input type="date" name="event_date" id="event_date" placeholder="Date" required />
+                <Textarea name="requirenment" placeholder="requirements, venue and Etc." required />
+                <SubmitButton type="submit" tw="mt-6">{isLoading ? 'Processing...' : 'Create Inquiry'}</SubmitButton>
+              </Form>
+            </TextContent>
+          </TextColumn>
+        </TwoColumn>
+        <ToastContainer
+          toastClassName="bg-primary-800"
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
+      </Container>
+
+      <section className="google-map-section">
+        <div className='google-map'>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.4388319826903!2d72.63657677607164!3d23.04436791551294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e870dc8a56111%3A0x6fcf1e5553e6d549!2sRK%20Events!5e0!3m2!1sen!2sin!4v1699354861933!5m2!1sen!2sin"
             width="100%"
@@ -133,47 +167,10 @@ export default ({
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            title="rkevents-google-map"
           />
-      </div>
-    </section>
-
-
-    <Container>
-      <TwoColumn>
-        <ImageColumn>
-          <Image imageSrc={EmailIllustrationSrc} />
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            <Heading>{heading}</Heading>
-            {description && <Description>{description}</Description>}
-            <Form action={formAction} ref={form} onSubmit={sendEmail}>
-              <Input type="text" name="from_name" placeholder="Full Name" required />
-              {/* <Input type="number" name="contact" placeholder="Contact Number" value={contactNumber} required  /> */}
-              <Input type="text" name="contact" placeholder="Contact Number" title="Ex:- 1234567890" pattern="[1-9]{1}[0-9]{9}" required maxlength="10" minLength="10" />
-              <Input type="email" name="reply_to" placeholder="Your Email Address" required />
-              <Input type="text" name="occasion" placeholder="Ocassion" required />
-              <Input type="date" name="event_date" id="event_date" placeholder="Date" required />
-              <Textarea name="requirenment" placeholder="requirements, venue and Etc." required />
-              <SubmitButton type="submit" tw="mt-6">{isLoading ? 'Processing...' : 'Create Inquiry'}</SubmitButton>
-            </Form>
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
-      <ToastContainer
-        toastClassName="bg-primary-800"
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-        />
-    </Container>
+        </div>
+      </section>
     </>
   );
 };

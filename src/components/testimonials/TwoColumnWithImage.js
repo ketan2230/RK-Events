@@ -10,6 +10,7 @@ import { ReactComponent as QuotesRightIcon } from "../../images/quotes-r.svg";
 import { ReactComponent as ArrowLeftIcon } from "../../images/arrow-left-2-icon.svg";
 import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-2-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
+import Title from "components/common/Title.js"
 // import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-5.svg";
 import Data from "data/events.json"
 
@@ -76,40 +77,38 @@ export default () => {
   const testimonials = Data.testimonials;
   return (
     <>
-      <section className="main-image-wrapper">
-        <h1 className="page-title">Happy Customers</h1>
-      </section>
-    <Container>
-      <Content>
-        <HeadingInfoContainer>
-          <HeadingTitle>Our Awesome <HIghlightedHeader> Customers</HIghlightedHeader></HeadingTitle>
-          <HeadingDescription></HeadingDescription>
-        </HeadingInfoContainer>
-        <TestimonialSliderContainer>
-          <TestimonialSlider nextArrow={<NextArrow />} prevArrow={<PreviousArrow />}>
-            {testimonials.map((testimonial, index) => (
-              <Testimonial key={index}>
-                <ImageContainer>
-                  <img src={testimonial.imageSrc} alt={testimonial.customerName} />
-                </ImageContainer>
-                <TextContainer>
-                  <QuoteContainer>
-                    <QuotesLeft />
-                    <Quote>{testimonial.quote}</Quote>
-                    <QuotesRight />
-                  </QuoteContainer>
-                  <CustomerInfo>
-                    <CustomerName>{testimonial.customerName}</CustomerName>
-                  </CustomerInfo>
-                </TextContainer>
-              </Testimonial>
-            ))}
-          </TestimonialSlider>
-        </TestimonialSliderContainer>
-      </Content>
-      <DecoratorBlob1 />
-      {/* <DecoratorBlob2 /> */}
-    </Container>
+      <Title header="Our Happy Customers" />
+      <Container>
+        <Content>
+          <HeadingInfoContainer>
+            <HeadingTitle>Our Awesome <HIghlightedHeader> Customers</HIghlightedHeader></HeadingTitle>
+            <HeadingDescription></HeadingDescription>
+          </HeadingInfoContainer>
+          <TestimonialSliderContainer>
+            <TestimonialSlider nextArrow={<NextArrow />} prevArrow={<PreviousArrow />}>
+              {testimonials.map((testimonial, index) => (
+                <Testimonial key={index}>
+                  <ImageContainer>
+                    <img src={testimonial.imageSrc} alt={testimonial.customerName} />
+                  </ImageContainer>
+                  <TextContainer>
+                    <QuoteContainer>
+                      <QuotesLeft />
+                      <Quote>{testimonial.quote}</Quote>
+                      <QuotesRight />
+                    </QuoteContainer>
+                    <CustomerInfo>
+                      <CustomerName>{testimonial.customerName}</CustomerName>
+                    </CustomerInfo>
+                  </TextContainer>
+                </Testimonial>
+              ))}
+            </TestimonialSlider>
+          </TestimonialSliderContainer>
+        </Content>
+        <DecoratorBlob1 />
+        {/* <DecoratorBlob2 /> */}
+      </Container>
     </>
   );
 };

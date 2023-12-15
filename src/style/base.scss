@@ -1,35 +1,45 @@
 .main-image-wrapper {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url("https://img.freepik.com/free-photo/table-with-table-chairs-large-balloon-arch_1340-33015.jpg?t=st=1699091336~exp=1699094936~hmac=d2efd7d3b442572d81880602f9a61b41cf19ebf307b00eb2f6bc8b1d448076f5&w=900");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 90vh;
-    place-content: center;
-    text-align: center;
-    display: grid;
-    color: white;
-    .page-title {
-      font-size: clamp(2rem,4.5vw,5rem);
-      font-weight: bold;
-      font-family: "Times New Roman", Times, serif;
-    }
-    .span-text {
-      font-size: 20px;
-    }
-    .since-text {
-      margin-top: 10px;
-    }
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://img.freepik.com/free-photo/table-with-table-chairs-large-balloon-arch_1340-33015.jpg?t=st=1699091336~exp=1699094936~hmac=d2efd7d3b442572d81880602f9a61b41cf19ebf307b00eb2f6bc8b1d448076f5&w=900");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 70vh;
+  place-content: center;
+  text-align: center;
+  display: grid;
+  color: white;
+  .page-title {
+    font-size: clamp(2rem, 4.5vw, 5rem);
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
   }
+  .span-text {
+    font-size: 20px;
+  }
+  .since-text {
+    margin-top: 10px;
+  }
+}
+.image-wrapper {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 70vh;
+  place-content: center;
+  text-align: center;
+  display: grid;
+}
 .container {
-    width: 100%;
-    width: min(90%, 1200px);
-    margin: 0 auto;
-    @media screen and (max-width: 1200px) {
-      flex-direction: column;
-    }
-    > div {
-      width: 100% !important;
-    }
+  width: 100%;
+  width: min(90%, 1200px);
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+  > div {
+    width: 100% !important;
+  }
 }

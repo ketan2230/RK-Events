@@ -35,26 +35,26 @@ export default function New() {
       </div>
       <div className='contact-container'>
         <div className='image-card-container'>
-            <div className='card'>
-              <i className="fa-solid fa-phone icon"></i>
-              <p className='title'>PHONE</p>
-              <span className='detail'>+88 (0) 101 0000 000</span>
-            </div>
-            <div className='card'>
-              <i className="fa-solid fa-map icon"></i>
-              <p className='title'>LOCATION</p>
-              <span className='detail'>198 West 21th Street, New York, NY 10010</span>
-            </div>
-            <div className='card'>
-              <i className="fa-solid fa-envelope icon"></i>
-              <p className='title'>EMAIL</p>
-              <span className='detail'>rkevents17@gmail.com</span>
-            </div>
-            <div className='card'>
-              <i className="fa-solid fa-fax icon"></i>
-              <p className='title'>SOCIAL</p>
-              <span className='detail'>+88 (0) 101 0000 000</span>
-            </div>
+          <div className='card'>
+            <i className="fa-solid fa-phone icon"></i>
+            <p className='title'>PHONE</p>
+            <span className='detail'>+88 (0) 101 0000 000</span>
+          </div>
+          <div className='card'>
+            <i className="fa-solid fa-map icon"></i>
+            <p className='title'>LOCATION</p>
+            <span className='detail'>198 West 21th Street, New York, NY 10010</span>
+          </div>
+          <div className='card'>
+            <i className="fa-solid fa-envelope icon"></i>
+            <p className='title'>EMAIL</p>
+            <span className='detail'>rkevents17@gmail.com</span>
+          </div>
+          <div className='card'>
+            <i className="fa-solid fa-fax icon"></i>
+            <p className='title'>SOCIAL</p>
+            <span className='detail'>+88 (0) 101 0000 000</span>
+          </div>
         </div>
       </div>
       <div className='google-map'>
@@ -68,6 +68,7 @@ export default function New() {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
+          title="rkevents-google-map"
         />
       </div>
     </>
