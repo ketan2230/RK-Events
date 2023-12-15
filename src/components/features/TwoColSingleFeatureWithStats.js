@@ -1,7 +1,7 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
+// import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading } from "components/misc/Headings.js";
 
 const Container = tw.div`relative`;
@@ -27,7 +27,7 @@ const Statistic = tw.div`text-lg sm:text-2xl lg:text-3xl w-1/2 mt-4 lg:mt-10 tex
 const Value = tw.div`font-bold text-primary-800`
 const Key = tw.div`font-medium text-gray-700`
 
-export default ({textOnLeft = false}) => {
+export default ({ textOnLeft = false }) => {
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
   //Change the statistics variable as you like, add or delete objects
   const statistics = [
@@ -61,10 +61,10 @@ export default ({textOnLeft = false}) => {
             <Description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Description>
             <Statistics>
               {statistics.map((statistic, index) => (
-              <Statistic key={index}>
-                <Value>{statistic.value}</Value>
-                <Key>{statistic.key}</Key>
-              </Statistic>
+                <Statistic key={index}>
+                  <Value>{statistic.value}</Value>
+                  <Key>{statistic.key}</Key>
+                </Statistic>
               ))}
             </Statistics>
           </TextContent>

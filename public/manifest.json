@@ -1,6 +1,6 @@
 {
   "short_name": "RK EVENTS",
-  "name": "RK Event Planner & Organizer in Ahmedabad, Gujarat",
+  "name": "RK Event Planner &amp; Organizer in Ahmedabad, Gujarat",
   "start_url": "/",
   "icons": [
     {
@@ -21,5 +21,28 @@
   ],
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#000000"
+  "background_color": "#000000",
+  "id": "rkevents",
+  "description": "RK Events provide services like Balloon Decoration, Flower Decoration, Mandap Services, Lights and Sound and Catering etc.",
+  "lang": "en",
+  "orientation": "any",
+  "display_override": [
+    "browser",
+    "fullscreen",
+    "minimal-ui",
+    "standalone",
+    "window-controls-overlay"
+  ],
+  "categories": [
+    "business",
+    "entertainment",
+    "food",
+    "games",
+    "kids",
+    "lifestyle",
+    "music",
+    "photo",
+    "social",
+    "utilities"
+  ]
 }
