@@ -1,9 +1,17 @@
+import tw from "twin.macro";
+import { SectionHeading } from "components/misc/Headings.js";
+
 const RecentStory = () => {
+  const HighlightedText = tw.span`bg-yellow-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const Heading = tw(
+    SectionHeading
+  )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+
   return (
     <section className="recent-event-story-section common-section-gap">
       <div className="container" style={{ display: 'block' }}>
         <div className="text-card" style={{ width: "100%" }}>
-          <h2 className="main-header text-center" style={{ width: "100%", textAlign: "center", marginBottom: "25px" }}>Recent Events Storys</h2>
+          <Heading style={{ width: "100%", textAlign: "center", marginBottom: "25px" }}>Our Recent <HighlightedText>Stories</HighlightedText></Heading>
         </div>
         <div className="recent-event-story-wrapper">
           <div className="recent-event-story-img01">

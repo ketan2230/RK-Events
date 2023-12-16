@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import tw, { styled } from 'twin.macro';
 // import SocialHeader from './SocialHeader.js'
 
@@ -16,7 +16,7 @@ const StyledHeader = styled(Header)`
   ${tw`sm:py-2 py-0 max-w-none w-full absolute px-5 z-30 sticky top-0 w-full text-white z-50`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     .active {
-      ${tw`text-yellow-400`}
+      ${tw`text-yellow-500`}
     }
     ${tw`text-gray-100 hover:text-yellow-400 cursor-pointer`}
   }
@@ -40,21 +40,21 @@ const navLinks = [
   </NavLinks>,
 ];
 
-(function() {
-	var anchors = document.getElementsByTagName('a'); //Find all links
-	var historyState = {};
-	for (var i = 0; i < anchors.length; i++) {
-		if (anchors[i].href.substring(0, window.location.origin.length) !== window.location.origin) {
-			continue;
-		}
-		
-		anchors[i].addEventListener('click', function(evt) {
-			evt.preventDefault();
-			if (window.history && window.history.pushState) {
-				window.history.pushState(historyState, evt.target.innerHTML, evt.target.href)
-			}
-		});
-	}
+(function () {
+  var anchors = document.getElementsByTagName('a'); //Find all links
+  var historyState = {};
+  for (var i = 0; i < anchors.length; i++) {
+    if (anchors[i].href.substring(0, window.location.origin.length) !== window.location.origin) {
+      continue;
+    }
+
+    anchors[i].addEventListener('click', function (evt) {
+      evt.preventDefault();
+      if (window.history && window.history.pushState) {
+        window.history.pushState(historyState, evt.target.innerHTML, evt.target.href)
+      }
+    });
+  }
 })();
 
 
@@ -64,10 +64,10 @@ const MainStickyHeader = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if(window.scrollY > 60) {
+      if (window.scrollY > 60) {
         setBackgroundColor('black')
       }
-      if (window.scrollY <= 60){
+      if (window.scrollY <= 60) {
         setBackgroundColor('unset')
       }
     };
@@ -80,10 +80,10 @@ const MainStickyHeader = () => {
 
   return (
     <>
-    <HeaderContainer style={{ backgroundColor }}>
-      {/* <SocialHeader /> */}
-      <StyledHeader links={navLinks} />
-    </HeaderContainer>
+      <HeaderContainer style={{ backgroundColor }}>
+        {/* <SocialHeader /> */}
+        <StyledHeader links={navLinks} />
+      </HeaderContainer>
     </>
   );
 };

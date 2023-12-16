@@ -6,7 +6,7 @@ import { Container } from "components/misc/Layouts.js";
 import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import TeamIllustrationSrc from "../../images/event/image2.jpg";
-import {ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
+import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg"
 
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;
 const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;

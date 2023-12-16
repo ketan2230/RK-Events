@@ -9,15 +9,15 @@ const GoToTopButton = styled.button`
   color: white;
   bottom: 20px;
   right: 20px;
-  background: #facc15;
-  border: 3px solid #facc15;
+  background: #ecc94b;
+  border: 3px solid #ecc94b;
 
   /* Hide the button when not visible */
   opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
 
   &:hover {
     background-color: transparent;
-    color: #facc15;
+    color: #ecc94b;
   }
 `;
 
@@ -44,9 +44,9 @@ const GoToTop = () => {
   }, []);
 
   return (
-      <GoToTopButton isVisible={showButton} onClick={goToTop}>
-        <Arrow />
-      </GoToTopButton>
+    <GoToTopButton isVisible={showButton} onClick={goToTop}>
+      <Arrow />
+    </GoToTopButton>
   );
 };
 
