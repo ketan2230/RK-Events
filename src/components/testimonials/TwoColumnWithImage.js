@@ -77,11 +77,11 @@ export default () => {
   const testimonials = Data.testimonials;
   return (
     <>
-      <Title header="Our Happy Customers" />
+      <Title header="Testimonials" />
       <Container>
         <Content>
           <HeadingInfoContainer>
-            <HeadingTitle>Our Awesome <HIghlightedHeader> Customers</HIghlightedHeader></HeadingTitle>
+            <HeadingTitle>Client Success <HIghlightedHeader> Stories</HIghlightedHeader></HeadingTitle>
             <HeadingDescription></HeadingDescription>
           </HeadingInfoContainer>
           <TestimonialSliderContainer>

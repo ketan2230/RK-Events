@@ -1,164 +1,168 @@
 .container {
-    // background-color: rgb(241, 241, 241);
-    // padding: 80px 300px;
-    text-align: left;
-    display: flex;
-  
-    .text-card {
-      width: 50%;
-      padding: 15px 30px;
-  
-      .main-header {
-        font-size: 48px;
-        font-weight: 500;
-        line-height: 1.4;
-        margin: 0;
-        width: min(100% , 500px);
-      }
-  
-      .sub-header {
-        font-size: 16px;
-        margin-bottom: 10px;
-        font-weight: 400;
-        color: rgb(70 15 179);
-      }
-  
-      .description {
-        color: rgb(115, 115, 115);
-      }
+  // background-color: rgb(241, 241, 241);
+  // padding: 80px 300px;
+  text-align: left;
+  display: flex;
+
+  .text-card {
+    width: 50%;
+    padding: 15px 30px;
+
+    .main-header {
+      font-size: 48px;
+      font-weight: 500;
+      line-height: 1.4;
+      margin: 0;
+      width: min(100%, 500px);
     }
-  
+
+    .sub-header {
+      font-size: 16px;
+      margin-bottom: 10px;
+      font-weight: 400;
+      color: rgb(70 15 179);
+    }
+
+    .description {
+      color: rgb(115, 115, 115);
+    }
+  }
+
+  .image-card {
+    width: 50%;
+    padding: 15px 30px;
+
+    .about-image {
+      height: 100%;
+      width: 100%;
+    }
+
+    .overlay {
+      position: relative;
+      display: inline-block;
+    }
+
+    .overlay > .about-image {
+      vertical-align: middle;
+    }
+
+    .overlay::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgb(224, 225, 218);
+      opacity: 0;
+      transition: 0.5s ease;
+    }
+
+    .overlay:hover::before {
+      opacity: 0.35;
+    }
+  }
+}
+
+.empty-block {
+  height: 3px;
+  width: 35px;
+  margin-top: 20px;
+  background-color: rgb(70 15 179);
+}
+
+.team-container {
+  // padding: 80px 0;
+  text-align: center;
+  justify-content: center;
+  // background-color: rgb(214, 212, 212);
+
+  .empty-block {
+    margin: 10px auto 0;
+  }
+
+  .image-card-container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
     .image-card {
-      width: 50%;
-      padding: 15px 30px;
-  
-      .about-image {
-        height: 100%;
+      img {
         width: 100%;
+        border-radius: 6px;
       }
-  
+
       .overlay {
         position: relative;
         display: inline-block;
       }
-  
-      .overlay>.about-image {
+
+      .overlay > img {
         vertical-align: middle;
       }
-  
+
       .overlay::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgb(224, 225, 218);
+        background: rgb(8, 143, 8);
         opacity: 0;
-        transition: .5s ease;
+        transition: 0.5s ease;
       }
-  
+
       .overlay:hover::before {
         opacity: 0.35;
       }
     }
   }
-  
-  .empty-block {
-    height: 3px;
-    width: 35px;
-    margin-top: 20px;
-    background-color: rgb(70 15 179);
-  }
-  
-  .team-container {
-    // padding: 80px 0;
-    text-align: center;
-    justify-content: center;
-    // background-color: rgb(214, 212, 212);
-  
-    .empty-block {
-      margin: 10px auto 0;
-    }
-  
-    .image-card-container {
-      width: min(90%,1200px);
-      margin: 0 auto;
-      padding: 60px 0;
+}
+
+.contact-container {
+  // padding: 80px 250px;
+  // text-align: center;
+  // justify-content: center;
+  background-color: rgb(248, 248, 248);
+
+  .image-card-container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+    padding: 60px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    .card {
+      padding: 15px 20px 20px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      .image-card {
-        img {
-          width: 100%;
-          border-radius: 6px;
-        }
-  
-        .overlay {
-          position: relative;
-          display: inline-block;
-        }
-  
-        .overlay>img {
-          vertical-align: middle;
-        }
-  
-        .overlay::before {
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
-          background: rgb(8, 143, 8);
-          opacity: 0;
-          transition: .5s ease;
-        }
-  
-        .overlay:hover::before {
-          opacity: 0.35;
-        }
+      gap: 10px;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid #ececec;
+      text-align: center;
+      svg {
+        margin: 0 auto;
+        width: 30px;
+      }
+      .icon {
+        font-size: 48px;
+      }
+      .title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .detail {
+        font-size: 16px;
+        color: rgb(54, 54, 54);
       }
     }
   }
-  
-  .contact-container {
-    // padding: 80px 250px;
-    // text-align: center;
-    // justify-content: center;
-    background-color: rgb(248, 248, 248);
-  
-    .image-card-container {
-      width: min(90%,1200px);
-      margin: 0 auto;
-      padding: 60px 0;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 15px;
-      .card {
-        padding: 15px 20px 20px;
-        display: grid;
-        gap: 10px;
-        background: white;
-        border-radius: 10px;
-        border: 1px solid #ececec;
-        text-align: center;
-        .icon {
-          font-size: 48px;
-        }
-        .title {
-          font-size: 20px;
-          font-weight: 600;
-        }
-        .detail {
-          font-size: 16px;
-          color: rgb(54, 54, 54);
-        }
-      }
-    }
-  }
-  
-  .google-map {
-    width: 100%;
-    height: 500px;
-  }
+}
+
+.google-map {
+  width: 100%;
+  height: 500px;
+}

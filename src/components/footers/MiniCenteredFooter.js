@@ -34,6 +34,7 @@ const SocialLink = styled.a`
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
 export default () => {
   // const navigate = useNavigate();
+  const currentYear = new Date().getFullYear()
 
   return (
     <Container>
@@ -45,13 +46,13 @@ export default () => {
             <LogoText href="/">RK EVENTS</LogoText>
           </LogoContainer>
           <LinksContainer>
-          <NavLink href="/">Home</NavLink>
-          <NavLink href="/aboutUs">About Us</NavLink>
-          <NavLink href="/themes">Themes</NavLink>
-          <NavLink href="/features">Features</NavLink>
-          <NavLink href="/reviews">Reviews</NavLink>
-          <NavLink href="/contactUs">Contact Us</NavLink>
-          <NavLink href="/teamsCondition">Tearms & Condition</NavLink>
+            <NavLink href="/">Home</NavLink>
+            <NavLink href="/aboutUs">About Us</NavLink>
+            <NavLink href="/themes">Themes</NavLink>
+            <NavLink href="/features">Features</NavLink>
+            <NavLink href="/reviews">Reviews</NavLink>
+            <NavLink href="/contactUs">Contact Us</NavLink>
+            <NavLink href="/teamsCondition">Tearms & Condition</NavLink>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="tel:+918488824036">
@@ -77,7 +78,7 @@ export default () => {
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright 2023, RK EVENTS Planner All Rights Reserved.
+            &copy; Copyright {currentYear}, RK EVENTS Planner All Rights Reserved.
           </CopyrightText>
         </Row>
       </Content>

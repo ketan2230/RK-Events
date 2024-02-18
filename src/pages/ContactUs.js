@@ -9,6 +9,13 @@ import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Title from "components/common/Title.js"
+// import { ReactComponent as CallIcon } from "../images/call.svg";
+// import { ReactComponent as GoogleIcon } from "../images/google-icon1.svg";
+// import { ReactComponent as Email } from "../images/email.svg";
+// import { ReactComponent as FacebookIcon } from "../images/facebook-icon.svg";
+// import { ReactComponent as YoutubeIcon } from "../images/youtube-icon.svg";
+// import { ReactComponent as InstagramIcon } from "../images/instagram-icon.svg";
+// import { ReactComponent as WhatsAppIcon } from "../images/whatsapp.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -34,7 +41,9 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `
 
-
+// const socialMedia = styled.div`
+// ${tw`flex items-center justify-between`}
+// `
 const SubmitButton = styled.button`
 ${tw`text-white py-2 px-2 mt-6`}
   transition: opacity 0.4s, background-color 0.4s, border 0.4s;
@@ -90,33 +99,33 @@ export default ({
 
   return (
     <>
-      <Title header="CONTACT US" />
-      <section>
+      <Title header="Get in Touch" />
+      {/* <section>
         <div className='contact-container'>
           <div className='image-card-container'>
             <div className='card'>
-              <i className="fa fa-phone icon"></i>
-              <p className='title'>PHONE</p>
+              <CallIcon />
               <span className='detail'>+91 8488824036</span>
             </div>
             <div className='card'>
-              <i className="fa fa-map icon"></i>
-              <p className='title'>Office Address</p>
+              <GoogleIcon />
               <span className='detail'>B-14, Janaki Apartment, nr Bhagwati School, Hirawadi, Ahmedabad</span>
             </div>
             <div className='card'>
-              <i className="fa fa-envelope icon"></i>
-              <p className='title'>EMAIL</p>
+              <Email />
               <span className='detail'>rkevents17@gmail.com</span>
             </div>
             <div className='card'>
-              <i className="fa fa-fax icon"></i>
-              <p className='title'>SOCIAL</p>
-              <span className='detail'>+88 (0) 101 0000 000</span>
+              <socialMedia>
+                <FacebookIcon />
+                <InstagramIcon />
+                <WhatsAppIcon />
+                <YoutubeIcon />
+              </socialMedia>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Container>
         <TwoColumn>

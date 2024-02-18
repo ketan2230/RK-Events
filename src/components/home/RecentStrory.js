@@ -11,7 +11,7 @@ const RecentStory = () => {
     <section className="recent-event-story-section common-section-gap">
       <div className="container" style={{ display: 'block' }}>
         <div className="text-card" style={{ width: "100%" }}>
-          <Heading style={{ width: "100%", textAlign: "center", marginBottom: "25px" }}>Our Recent <HighlightedText>Stories</HighlightedText></Heading>
+          <Heading style={{ width: "100%", textAlign: "center", marginBottom: "25px" }}>Image <HighlightedText>Gallery</HighlightedText></Heading>
         </div>
         <div className="recent-event-story-wrapper">
           <div className="recent-event-story-img01">
@@ -47,6 +47,24 @@ const RecentStory = () => {
           <div className="recent-event-story-img06">
             <img
               src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+          <div className="recent-event-story-img07">
+            <img
+              src="https://cdn0.weddingwire.in/vendor/2199/3_2/640/png/2_15_52199.webp"
+              alt=""
+            />
+          </div>
+          <div className="recent-event-story-img08">
+            <img
+              src="https://cdn0.weddingwire.in/vendor/2199/3_2/640/png/capture_15_52199.webp"
+              alt=""
+            />
+          </div>
+          <div className="recent-event-story-img09">
+            <img
+              src="https://images.unsplash.com/photo-1537026952880-102669376468?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
             />
           </div>
