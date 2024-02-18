@@ -21,7 +21,13 @@ const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
 const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`;
-const NavLink = tw.a`font-mono hover:text-gray-500 transition duration-300 mt-2 mx-4`;
+const NavLink = styled.a`
+  ${tw`font-mono hover:text-gray-500 transition duration-300 mt-2 mx-4 hover:text-yellow-400`}
+
+  span.active {
+    ${tw`text-yellow-500`}
+  }
+`;
 
 const SocialLinksContainer = tw.div`mt-10`;
 const SocialLink = styled.a`
@@ -34,7 +40,7 @@ const SocialLink = styled.a`
 const CopyrightText = tw.p`text-center mt-10 font-medium tracking-wide text-sm text-gray-600`;
 export default () => {
   // const navigate = useNavigate();
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <Container>
@@ -46,13 +52,49 @@ export default () => {
             <LogoText href="/">RK EVENTS</LogoText>
           </LogoContainer>
           <LinksContainer>
-            <NavLink href="/">Home</NavLink>
-            <NavLink href="/aboutUs">About Us</NavLink>
-            <NavLink href="/themes">Themes</NavLink>
-            <NavLink href="/features">Features</NavLink>
-            <NavLink href="/reviews">Reviews</NavLink>
-            <NavLink href="/contactUs">Contact Us</NavLink>
-            <NavLink href="/teamsCondition">Tearms & Condition</NavLink>
+            <NavLink href="/">
+              <span
+                className={window.location.pathname === "/" ? "active" : ""}
+              >
+                Home
+              </span>
+            </NavLink>
+            <NavLink href="/aboutUs">
+              <span
+                className={
+                  window.location.pathname === "/aboutUs" ? "active" : ""
+                }
+              >
+                About Us
+              </span>
+            </NavLink>
+            <NavLink href="/themes">
+              <span
+                className={
+                  window.location.pathname === "/themes" ? "active" : ""
+                }
+              >
+                Themes
+              </span>
+            </NavLink>
+            <NavLink href="/reviews">
+              <span
+                className={
+                  window.location.pathname === "/reviews" ? "active" : ""
+                }
+              >
+                Testimonials
+              </span>
+            </NavLink>
+            <NavLink href="/contactUs">
+              <span
+                className={
+                  window.location.pathname === "/contactUs" ? "active" : ""
+                }
+              >
+                Contact Us
+              </span>
+            </NavLink>
           </LinksContainer>
           <SocialLinksContainer>
             <SocialLink href="tel:+918488824036">
@@ -61,7 +103,10 @@ export default () => {
             <SocialLink href="mailto:rkevents17@gmail.com" target="_">
               <Email />
             </SocialLink>
-            <SocialLink href="https://www.facebook.com/people/RK-Events/100063812500363/" target="_">
+            <SocialLink
+              href="https://www.facebook.com/people/RK-Events/100063812500363/"
+              target="_"
+            >
               <FacebookIcon />
             </SocialLink>
             <SocialLink href="https://wa.me/+918488824036" target="_">
@@ -73,12 +118,16 @@ export default () => {
             <SocialLink href="https://youtube.com/@rk_events" target="_">
               <YoutubeIcon />
             </SocialLink>
-            <SocialLink href="https://www.instagram.com/r_k__events/" target="_">
+            <SocialLink
+              href="https://www.instagram.com/r_k__events/"
+              target="_"
+            >
               <InstagramIcon />
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
-            &copy; Copyright {currentYear}, RK EVENTS Planner All Rights Reserved.
+            &copy; Copyright {currentYear}, RK EVENTS Planner All Rights
+            Reserved.
           </CopyrightText>
         </Row>
       </Content>
