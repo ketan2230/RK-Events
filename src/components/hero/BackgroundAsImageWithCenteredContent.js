@@ -7,7 +7,7 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
 const Container = styled.div`
-  ${tw`relative bg-center bg-cover h-screen min-h-144 sm:mt-0`}
+  ${tw`relative bg-center bg-cover h-screen sm:mt-0`}
 `;
 
 const OpacityOverlay = tw.div`absolute inset-0 bg-black opacity-50`;
@@ -20,7 +20,6 @@ const Heading = styled.h1`
 `;
 
 export default () => {
-
   const bgImages = Data.mainPageImagesSlogan;
   const optionsOwl = {
     items: 1,

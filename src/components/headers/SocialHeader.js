@@ -1,4 +1,4 @@
-import tw, { styled } from 'twin.macro';
+import tw, { styled } from "twin.macro";
 import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as GoogleIcon } from "../../images/google-icon1.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
@@ -8,7 +8,7 @@ import { ReactComponent as CallIcon } from "../../images/call.svg";
 import { ReactComponent as Email } from "../../images/email.svg";
 
 const HeaderContent = styled.div`
-  ${tw`sm:flex py-1 w-full bg-black border-b border-gray-600`}
+  ${tw`sm:flex py-1 w-full bg-yellow-600`}
 `;
 
 const SocialLinksContainer = tw.div`my-2 sm:my-1 mx-auto sm:mx-0 sm:justify-end flex w-full`;
@@ -34,43 +34,46 @@ const SocialLink = styled.a`
 `;
 
 const SocialHeader = () => {
-    return (
-        <HeaderContent>
-            <ContactContainer>
-                <SocialLinkContact href="tel:+918488824036" target="_">
-                    <CallIcon />
-                    <Details>+918488824036</Details>
-                </SocialLinkContact>
-                <SocialLinkContact href="mailto:rkevents17@gmail.com" target="_">
-                    <Email />
-                    <Details>rkevents17@gmail.com</Details>
-                </SocialLinkContact>
-            </ContactContainer>
-            <SocialLinksContainer>
-                <SocialLinkContactMobile href="tel:+918488824036">
-                    <CallIcon />
-                </SocialLinkContactMobile>
-                <SocialLinkContactMobile href="mailto:rkevents17@gmail.com" target="_">
-                    <Email />
-                </SocialLinkContactMobile>
-                <SocialLink href="https://www.facebook.com/people/RK-Events/100063812500363/" target="_">
-                    <FacebookIcon />
-                </SocialLink>
-                <SocialLink href="https://wa.me/+918488824036" target="_">
-                    <WhatsAppIcon />
-                </SocialLink>
-                <SocialLink href="https://g.page/r/CUnV5lNVHs9vEA0" target="_">
-                    <GoogleIcon />
-                </SocialLink>
-                <SocialLink href="https://youtube.com/@rk_events" target="_">
-                    <YoutubeIcon />
-                </SocialLink>
-                <SocialLink href="https://www.instagram.com/r_k__events/" target="_">
-                    <InstagramIcon />
-                </SocialLink>
-            </SocialLinksContainer>
-        </HeaderContent>
-    )
-}
+  return (
+    <HeaderContent>
+      <ContactContainer>
+        <SocialLinkContact href="tel:+918488824036" target="_">
+          <CallIcon />
+          <Details>+918488824036</Details>
+        </SocialLinkContact>
+        <SocialLinkContact href="mailto:rkevents17@gmail.com" target="_">
+          <Email />
+          <Details>rkevents17@gmail.com</Details>
+        </SocialLinkContact>
+      </ContactContainer>
+      <SocialLinksContainer>
+        <SocialLinkContactMobile href="tel:+918488824036">
+          <CallIcon />
+        </SocialLinkContactMobile>
+        <SocialLinkContactMobile href="mailto:rkevents17@gmail.com" target="_">
+          <Email />
+        </SocialLinkContactMobile>
+        <SocialLink
+          href="https://www.facebook.com/people/RK-Events/100063812500363/"
+          target="_"
+        >
+          <FacebookIcon />
+        </SocialLink>
+        <SocialLink href="https://wa.me/+918488824036" target="_">
+          <WhatsAppIcon />
+        </SocialLink>
+        <SocialLink href="https://g.page/r/CUnV5lNVHs9vEA0" target="_">
+          <GoogleIcon />
+        </SocialLink>
+        <SocialLink href="https://youtube.com/@rk_events" target="_">
+          <YoutubeIcon />
+        </SocialLink>
+        <SocialLink href="https://www.instagram.com/r_k__events/" target="_">
+          <InstagramIcon />
+        </SocialLink>
+      </SocialLinksContainer>
+    </HeaderContent>
+  );
+};
 
 export default SocialHeader;

@@ -5,6 +5,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage";
 // import MainFeature from "components/features/TwoColWithButton.js";
 import Features from "components/features/ThreeColSimple.js";
 import RecentStory from "components/home/RecentStrory";
+// import ProjectComplete from "components/home/ProjectComplete";
 
 import rupeeIcon from "images/icon/rupee.png";
 import editIcon from "images/icon/edit.png";
@@ -55,7 +56,7 @@ export default () => {
           imageCss={tw`w-20! h-20!`}
         />
         <Image image="https://wp-media-partyslate.imgix.net/2021/05/photo-850b35ef-a429-4e24-b6b3-a724685e97ca.jpeg?auto=compress%2Cformat&ixlib=php-3.3.1" />
-
+        {/* <ProjectComplete /> */}
         <RecentStory />
         <Image image="https://wp-media-partyslate.imgix.net/2021/04/photo-069009d6-7a72-44d9-9bd8-d69ec5f67e44.jpeg?auto=compress%2Cformat&ixlib=php-3.3.1" />
 
