@@ -1,6 +1,6 @@
 import "./../style/Aboutus.scss";
 import "./../style/base.scss";
-import Title from "components/common/Title.js"
+import Title from "components/common/Title.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import tw from "twin.macro";
 // import RecentStory from "../components/home/RecentStrory";
@@ -8,29 +8,37 @@ import tw from "twin.macro";
 
 const AboutUs = () => {
   // let data = [1, 2, 3, 4]
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
   const yearsSinceEstablishment = currentYear - 2015;
   const Subheading = tw.span`tracking-wider text-sm font-medium text-yellow-800`;
-  const HighlightedText = tw.span`bg-yellow-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`;
   const Description = tw.span`inline-block mt-8 text-base`;
   const imageCss = tw`rounded-4xl`;
 
   return (
     <>
-      <Title header="Our Journey" topHeader="Know" bottomHeader="SINCE 2015" />
+      <Title
+        header="Our Journey"
+        topHeader="Know"
+        bottomHeader="SINCE 2015"
+        image="https://images.unsplash.com/photo-1470345961863-06d4b12d93b3?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
       <MainFeature
         id="about"
         subheading={<Subheading>Established Since 2015</Subheading>}
         heading={
           <>
             We've been serving for
-            <wbr /> <HighlightedText>over {yearsSinceEstablishment}+ years.</HighlightedText>
+            <wbr />{" "}
+            <HighlightedText>
+              over {yearsSinceEstablishment}+ years.
+            </HighlightedText>
           </>
         }
         description={
           <Description>
-            RK Events, your one stop solution for making any event
-            memorable or a success.
+            RK Events, your one stop solution for making any event memorable or
+            a success.
             <br />
             <br />
             We provide Birthday Party, Wedding Arrangements, Bride & Groom
@@ -38,8 +46,8 @@ const AboutUs = () => {
             Photography & Videography and etc.
             <br />
             <br />
-            With a Team having an expertise of over 6+ years, your event being
-            a success is guaranteed.
+            With a Team having an expertise of over 6+ years, your event being a
+            success is guaranteed.
           </Description>
         }
         buttonRounded={false}
@@ -134,7 +142,6 @@ const AboutUs = () => {
       </div> */}
 
       {/* <RecentStory /> */}
-
     </>
   );
 };

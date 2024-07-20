@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import tw from 'twin.macro';
+import tw from "twin.macro";
 import styled from "styled-components";
 // import { Link } from 'react-router-dom';
 import { css } from "styled-components/macro"; //eslint-disable-line
@@ -42,22 +42,22 @@ export const PrimaryLink = tw(NavLink)`
 `;
 
 export const LogoLink = styled(NavLink)`
-  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0!`};
+  ${tw`flex items-center font-black border-b-0 text-2xl! ml-0! hover:border-b-0!`};
 
   img {
     ${tw`mr-3`}
     height: 4rem; /* Default image height */
 
-  @media (max-width: 640px) {
-    /* Small screen styles */
-    height: 3rem; /* Adjust image height for small screens */
-  }
+    @media (max-width: 640px) {
+      /* Small screen styles */
+      height: 3rem; /* Adjust image height for small screens */
+    }
   }
 `;
 
 const LogoText = tw.div`
-hidden sm:block
-`
+hidden sm:block text-gray-100 cursor-pointer
+`;
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
@@ -140,18 +140,14 @@ export default ({
           animate={animation}
           css={collapseBreakpointCss.mobileNavLinks}
         >
-        <CloseIcon tw="w-6 h-6 ml-auto" onClick={toggleNavbar} />
+          <CloseIcon tw="w-6 h-6 ml-auto" onClick={toggleNavbar} />
           {links}
         </MobileNavLinks>
         <NavToggle
           onClick={toggleNavbar}
           className={showNavLinks ? "open" : "closed"}
         >
-          {showNavLinks ? (
-            ''
-          ) : (
-            <MenuIcon tw="w-6 h-6" />
-          )}
+          {showNavLinks ? "" : <MenuIcon tw="w-6 h-6" />}
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>

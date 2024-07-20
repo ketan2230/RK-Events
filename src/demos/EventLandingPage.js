@@ -5,7 +5,7 @@ import AnimationRevealPage from "helpers/AnimationRevealPage";
 // import MainFeature from "components/features/TwoColWithButton.js";
 import Features from "components/features/ThreeColSimple.js";
 import RecentStory from "components/home/RecentStrory";
-// import ProjectComplete from "components/home/ProjectComplete";
+import ProjectComplete from "components/home/ProjectComplete";
 
 import rupeeIcon from "images/icon/rupee.png";
 import editIcon from "images/icon/edit.png";
@@ -16,7 +16,7 @@ import tw from "twin.macro";
 import Image from "components/home/Image";
 
 export default () => {
-  const HighlightedText = tw.span`bg-yellow-500 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
   return (
     <div>
@@ -56,7 +56,7 @@ export default () => {
           imageCss={tw`w-20! h-20!`}
         />
         <Image image="https://wp-media-partyslate.imgix.net/2021/05/photo-850b35ef-a429-4e24-b6b3-a724685e97ca.jpeg?auto=compress%2Cformat&ixlib=php-3.3.1" />
-        {/* <ProjectComplete /> */}
+        <ProjectComplete />
         <RecentStory />
         <Image image="https://wp-media-partyslate.imgix.net/2021/04/photo-069009d6-7a72-44d9-9bd8-d69ec5f67e44.jpeg?auto=compress%2Cformat&ixlib=php-3.3.1" />
 

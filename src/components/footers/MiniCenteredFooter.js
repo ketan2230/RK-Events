@@ -17,21 +17,21 @@ const Content = tw.div`max-w-screen-xl mx-auto py-12`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`;
 
-const LogoContainer = tw.div`flex items-center justify-center md:justify-start`;
-const LogoText = tw.h5`ml-2 text-2xl font-black tracking-wider`;
+const LogoContainer = tw.a`flex items-center justify-center md:justify-start`;
+const LogoText = tw.a`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`;
 const NavLink = styled.a`
-  ${tw`font-mono hover:text-gray-500 transition duration-300 mt-2 mx-4 hover:text-yellow-400`}
+  ${tw`font-mono text-gray-400 transition duration-300 mt-2 mx-4 hover:text-gray-100 hover:border-b-2 pb-2`}
 
-  span.active {
-    ${tw`text-yellow-500`}
+  .active {
+    ${tw`text-gray-100 border-b-2 pb-3 border-gray-100 hover:border-b-0`}
   }
 `;
 
 const SocialLinksContainer = tw.div`mt-10`;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block text-gray-100 hover:text-gray-500 transition duration-300 sm:mx-4 mx-2`}
+  ${tw`cursor-pointer inline-block text-gray-400 hover:text-gray-100 transition duration-300 sm:mx-4 mx-2`}
   svg {
     ${tw`w-5 h-5`}
   }
@@ -48,7 +48,6 @@ export default () => {
         <Row>
           <LogoContainer>
             <img src={logo} alt="logo" width="70px" />
-            {/* <LogoImg src={logo} width="70px" /> */}
             <LogoText href="/">RK EVENTS</LogoText>
           </LogoContainer>
           <LinksContainer>

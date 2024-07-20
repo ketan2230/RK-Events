@@ -15,12 +15,15 @@ const StyledHeader = styled(Header)`
   ${tw`sm:py-2 py-0 max-w-none w-full absolute px-5 z-30 sticky top-0 w-full text-white z-50`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
     .active {
-      ${tw`text-yellow-500`}
+      ${tw`text-gray-100 border-b-2 pb-2 border-gray-100 hover:border-b-0`}
     }
-    ${tw`text-gray-100 hover:text-yellow-400 cursor-pointer`}
+    ${tw`text-gray-400 hover:text-gray-100 cursor-pointer hover:border-b-2 pb-2 transition duration-300`}
   }
   ${NavToggle}.closed {
-    ${tw`text-gray-100 hover:text-primary-500`}
+    ${tw`text-gray-400 hover:text-primary-500`}
+  }
+  ${LogoLink} {
+    ${tw`text-gray-100 cursor-pointer`}
   }
 `;
 

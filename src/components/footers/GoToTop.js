@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import tw, { styled } from 'twin.macro';
+import React, { useState } from "react";
+import tw, { styled } from "twin.macro";
 import { ReactComponent as Arrow } from "../../images/arrow.svg";
 
 const GoToTopButton = styled.button`
@@ -9,15 +9,15 @@ const GoToTopButton = styled.button`
   color: white;
   bottom: 20px;
   right: 20px;
-  background: #ecc94b;
-  border: 3px solid #ecc94b;
+  background: #460fb3;
+  border: 3px solid #460fb3;
 
   /* Hide the button when not visible */
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
+  opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
 
   &:hover {
     background-color: transparent;
-    color: #ecc94b;
+    color: #460fb3;
   }
 `;
 
@@ -27,7 +27,7 @@ const GoToTop = () => {
 
   // Function to scroll to the top of the page
   const goToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   // Function to toggle the visibility of the button based on scroll position
@@ -39,8 +39,8 @@ const GoToTop = () => {
 
   // Attach scroll event listener on mount
   React.useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

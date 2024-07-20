@@ -10,9 +10,9 @@ import { ReactComponent as QuotesRightIcon } from "../../images/quotes-r.svg";
 import { ReactComponent as ArrowLeftIcon } from "../../images/arrow-left-2-icon.svg";
 import { ReactComponent as ArrowRightIcon } from "../../images/arrow-right-2-icon.svg";
 import { ReactComponent as SvgDecoratorBlob1 } from "../../images/svg-decorator-blob-4.svg";
-import Title from "components/common/Title.js"
+import Title from "components/common/Title.js";
 // import { ReactComponent as SvgDecoratorBlob2 } from "../../images/svg-decorator-blob-5.svg";
-import Data from "data/events.json"
+import Data from "data/events.json";
 
 import "slick-carousel/slick/slick.css";
 
@@ -34,10 +34,14 @@ const QuoteContainer = tw.div`relative p-6 md:p-8 lg:p-10 mt-4 md:mt-0`;
 const Quote = tw.blockquote`text-center md:text-left font-medium text-xl lg:text-2xl xl:text-3xl`;
 const CustomerInfo = tw.div`px-5 lg:px-10 text-center md:text-left mt-4 md:mt-0`;
 const CustomerName = tw.h5`font-bold text-lg lg:text-xl xl:text-2xl text-primary-800`;
-const HIghlightedHeader = tw.p`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`
+const HIghlightedHeader = tw.p`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
-const QuotesLeft = tw(QuotesLeftIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-800 absolute top-0 left-0`;
-const QuotesRight = tw(QuotesRightIcon)`w-8 h-8 lg:w-10 lg:h-10 text-primary-800 absolute bottom-0 right-0`;
+const QuotesLeft = tw(
+  QuotesLeftIcon
+)`w-8 h-8 lg:w-10 lg:h-10 text-primary-800 absolute top-0 left-0`;
+const QuotesRight = tw(
+  QuotesRightIcon
+)`w-8 h-8 lg:w-10 lg:h-10 text-primary-800 absolute bottom-0 right-0`;
 
 const SliderControlButtonContainer = styled.div`
   ${tw`absolute top-0 h-full flex items-end md:items-center z-20`}
@@ -77,19 +81,30 @@ export default () => {
   const testimonials = Data.testimonials;
   return (
     <>
-      <Title header="Testimonials" />
+      <Title
+        header="Testimonials"
+        image="https://images.unsplash.com/photo-1470345961863-06d4b12d93b3?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      />
       <Container>
         <Content>
           <HeadingInfoContainer>
-            <HeadingTitle>Client Success <HIghlightedHeader> Stories</HIghlightedHeader></HeadingTitle>
+            <HeadingTitle>
+              Client Success <HIghlightedHeader> Stories</HIghlightedHeader>
+            </HeadingTitle>
             <HeadingDescription></HeadingDescription>
           </HeadingInfoContainer>
           <TestimonialSliderContainer>
-            <TestimonialSlider nextArrow={<NextArrow />} prevArrow={<PreviousArrow />}>
+            <TestimonialSlider
+              nextArrow={<NextArrow />}
+              prevArrow={<PreviousArrow />}
+            >
               {testimonials.map((testimonial, index) => (
                 <Testimonial key={index}>
                   <ImageContainer>
-                    <img src={testimonial.imageSrc} alt={testimonial.customerName} />
+                    <img
+                      src={testimonial.imageSrc}
+                      alt={testimonial.customerName}
+                    />
                   </ImageContainer>
                   <TextContainer>
                     <QuoteContainer>
