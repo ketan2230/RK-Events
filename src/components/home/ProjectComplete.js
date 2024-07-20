@@ -31,7 +31,7 @@ const PorjectComplete = () => {
     <MainContainer>
       <div className="text-card" style={{ width: "100%" }}>
         <Heading
-          style={{ width: "100%", textAlign: "center", marginTop: "80px" }}
+          style={{ width: "100%", textAlign: "center", marginTop: "100px" }}
         >
           Our <HighlightedText>Achievements</HighlightedText>
         </Heading>
