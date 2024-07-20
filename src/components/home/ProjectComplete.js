@@ -6,7 +6,7 @@ const Container = styled.div`
   ${tw`py-16 flex flex-col items-center lg:items-stretch lg:flex-row flex-wrap lg:justify-center max-w-screen-lg mx-auto`}
 `;
 const MainContainer = styled.div`
-  ${tw`bg-yellow-100`}
+  ${tw``}
 `;
 const Column = styled.div`
   ${tw`w-full sm:w-1/4 py-6`}

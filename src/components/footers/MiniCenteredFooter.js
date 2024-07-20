@@ -15,17 +15,17 @@ import { ReactComponent as Email } from "../../images/email.svg";
 const Container = tw(ContainerBase)`bg-black text-gray-100 bottom-0 w-full`;
 const Content = tw.div`max-w-screen-xl mx-auto py-12`;
 
-const Row = tw.div`flex items-center justify-center flex-col px-8`;
+const Row = tw.div`flex items-center justify-center flex-col px-2 md:px-8`;
 
 const LogoContainer = tw.a`flex items-center justify-center md:justify-start`;
 const LogoText = tw.a`ml-2 text-2xl font-black tracking-wider`;
 
 const LinksContainer = tw.div`mt-8 font-medium flex flex-wrap justify-center items-center flex-col sm:flex-row`;
 const NavLink = styled.a`
-  ${tw`font-mono text-gray-400 transition duration-300 mt-2 mx-4 hover:text-gray-100 hover:border-b-2 pb-2`}
+  ${tw`font-mono text-gray-400 transition duration-300 mt-2 mx-4 hover:text-gray-100 hover:border-b-2 pb-1 pt-2`}
 
   .active {
-    ${tw`text-gray-100 border-b-2 pb-3 border-gray-100 hover:border-b-0`}
+    ${tw`text-gray-100 border-b-2 pb-2 border-gray-100 hover:border-b-0`}
   }
 `;
 
