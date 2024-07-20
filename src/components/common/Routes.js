@@ -6,7 +6,7 @@ import New from "pages/New";
 import ContactUsForm from "pages/ContactUs";
 import AboutUs from "pages/Aboutus";
 import Themes from "components/cards/TabCardGrid.js";
-import Reviews from "components/testimonials/TwoColumnWithImage";
+import Reviews from "pages/Testimonials";
 import Event from "pages/Event.js";
 // import rupeeIcon from "images/icon/rupee.png";
 // import editIcon from "images/icon/edit.png";
