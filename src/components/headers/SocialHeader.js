@@ -11,7 +11,7 @@ const HeaderContent = styled.div`
   ${tw`sm:flex py-1 w-full bg-black`}
 `;
 
-const SocialLinksContainer = tw.div`my-2 sm:my-1 mx-auto sm:mx-0 sm:justify-end flex w-full`;
+const SocialLinksContainer = tw.div`my-2 sm:my-1 mx-auto sm:mx-8 mr-4 sm:justify-end flex w-full`;
 const ContactContainer = tw.div`hidden my-1 mt-1 ml-4 sm:flex items-center`;
 const Details = tw.div`text-gray-400 hover:text-gray-100 transition cursor-pointer duration-300 mx-2`;
 const SocialLinkContact = styled.a`
