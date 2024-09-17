@@ -21,7 +21,7 @@ const TabControl = styled.div`
   &:hover {
     ${tw`bg-gray-300 text-gray-700`}
   }
-  ${(props) => props.active && tw`bg-primary-800! text-gray-100!`}
+  ${(props) => props.active && tw`bg-gray-700! text-gray-100!`}
   }
 `;
 
@@ -43,14 +43,14 @@ const CardImage = styled.img`
   ${tw` hover:scale-110 transition duration-700 ease-in-out`}
 `;
 const CardText = tw.div`p-4 text-gray-900`;
-const CardTitle = tw.h5`text-lg font-semibold group-hover:text-primary-800`;
+const CardTitle = tw.h5`text-lg font-semibold group-hover:text-gray-700`;
 const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;
 
 // const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 //   ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-64 w-64 opacity-15 transform translate-x-2/3 -translate-y-12 text-pink-400`}
 // `;
 // const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-//   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-primary-800`}
+//   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-gray-700`}
 // `;
 
 export default () => {

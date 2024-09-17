@@ -35,7 +35,7 @@ const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-m
 const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `;
-const HighlightedText = tw.p`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+const HighlightedText = tw.p`bg-gray-700 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
 // const socialMedia = styled.div`
 // ${tw`flex items-center justify-between`}
@@ -174,7 +174,7 @@ export default ({
           </TextColumn>
         </TwoColumn>
         <ToastContainer
-          toastClassName="bg-primary-800"
+          toastClassName="bg-gray-700"
           position="top-center"
           autoClose={5000}
           hideProgressBar={false}

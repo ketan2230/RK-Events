@@ -8,7 +8,7 @@ import { ReactComponent as CallIcon } from "../../images/call.svg";
 import { ReactComponent as Email } from "../../images/email.svg";
 
 const HeaderContent = styled.div`
-  ${tw`sm:flex py-1 w-full bg-black`}
+  ${tw`sm:flex py-1 w-full bg-gray-700`}
 `;
 
 const SocialLinksContainer = tw.div`my-2 sm:my-1 mx-auto sm:mx-8 mr-4 sm:justify-end flex w-full`;

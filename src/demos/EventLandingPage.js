@@ -16,7 +16,7 @@ import tw from "twin.macro";
 import Image from "components/home/Image";
 
 export default () => {
-  const HighlightedText = tw.span`bg-primary-800 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span`bg-gray-700 text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
   return (
     <div>

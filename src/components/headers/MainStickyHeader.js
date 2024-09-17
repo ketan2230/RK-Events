@@ -9,7 +9,6 @@ import Header, {
   NavToggle,
   DesktopNavLinks,
 } from "../headers/light.js";
-// import logo from "../../images/logoWhite.png";
 
 const StyledHeader = styled(Header)`
   ${tw`sm:py-2 py-0 max-w-none w-full absolute px-5 z-30 sticky top-0 w-full text-white z-50`}
@@ -89,10 +88,18 @@ const navLinks = [
 })();
 
 const MainStickyHeader = () => {
-  const [backgroundColor, setBackgroundColor] = useState("unset");
+  const [backgroundColor, setBackgroundColor] = useState("black");
+  const [showSocialMedia, setSocialMedia] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log("We are here", window.scrollY);
+      if (window.innerWidth > 600 && window.scrollY > 60) {
+        setSocialMedia(false);
+      } else {
+        setSocialMedia(true);
+      }
+
       if (window.scrollY > 60) {
         setBackgroundColor("black");
       }
@@ -109,7 +116,7 @@ const MainStickyHeader = () => {
   return (
     <>
       <HeaderContainer style={{ backgroundColor }}>
-        <SocialHeader />
+        {showSocialMedia && <SocialHeader />}
         <StyledHeader links={navLinks} />
       </HeaderContainer>
     </>
