@@ -10,8 +10,8 @@ const AboutUs = () => {
   // let data = [1, 2, 3, 4]
   const currentYear = new Date().getFullYear();
   const yearsSinceEstablishment = currentYear - 2015;
-  const Subheading = tw.span`tracking-wider text-sm font-medium text-gray-700`;
-  const HighlightedText = tw.span`bg-gray-700 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const Subheading = tw.span`tracking-wider text-sm font-medium text-gold`;
+  const HighlightedText = tw.span`bg-darkgold text-gray-100 px-4 transform -skew-x-12 inline-block`;
   const Description = tw.span`inline-block mt-8 text-base`;
   const imageCss = tw`rounded-4xl`;
 

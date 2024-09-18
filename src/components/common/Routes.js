@@ -13,7 +13,7 @@ import Event from "pages/Event.js";
 // import internateIcon from "images/icon/internate.png";
 // import tw from "twin.macro";
 
-// const HighlightedText = tw.span`bg-gray-700 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+// const HighlightedText = tw.span`bg-darkgold text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
 const AppRoutes = () => {
   return (

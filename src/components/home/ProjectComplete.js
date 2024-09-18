@@ -15,14 +15,14 @@ const HighlightedText2 = styled.div`
   ${tw`text-center font-black text-4xl text-black mt-2`}
 `;
 const SubText = styled.div`
-  ${tw`text-center text-gray-700 text-xl font-bold leading-none mt-2`}
+  ${tw`text-center text-gold text-xl font-bold leading-none mt-2`}
 `;
 const StyledSVG = styled.svg`
   ${tw`mx-auto text-black`}
 `;
 
 const PorjectComplete = () => {
-  const HighlightedText = tw.span`bg-gray-700 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span`bg-darkgold text-gray-100 px-4 transform -skew-x-12 inline-block`;
   const Heading = tw(
     SectionHeading
   )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;

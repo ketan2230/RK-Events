@@ -23,14 +23,14 @@ export const NavLinks = tw.div`inline-block`;
  * focus:bg-primary-700 will apply the bg-primary-700 class on hover or focus
  */
 export const NavLink = tw.a`
-  text-lg my-2 lg:text-base lg:mx-6 lg:my-0 cursor-pointer
+  text-lg my-2 lg:mx-6 lg:my-0 cursor-pointer
   font-semibold tracking-wide transition duration-300
   pb-1 hover:text-gray-100
 `;
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-gray-700 text-gray-100 cursor-pointer
+  px-8 py-3 rounded bg-darkgold text-gray-100 cursor-pointer
   focus:bg-primary-900 focus:text-gray-200 focus:shadow-outline
   border-b-0
 `;
@@ -55,7 +55,7 @@ hidden sm:block text-gray-100 cursor-pointer
 
 export const MobileNavLinksContainer = tw.nav`flex flex-1 items-center justify-between`;
 export const NavToggle = tw.button`
-  lg:hidden z-20 focus:outline-none focus:text-gray-700 transition duration-300
+  lg:hidden z-20 focus:outline-none focus:text-gold transition duration-300
 `;
 export const MobileNavLinks = motion(styled.div`
   ${tw`lg:hidden z-10 fixed top-0 inset-x-0 mx-4 my-6 p-8 border text-center rounded-lg text-gray-900 bg-white`}

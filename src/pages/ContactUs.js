@@ -35,7 +35,7 @@ const Input = tw.input`mt-6 first:mt-0 border-b-2 py-3 focus:outline-none font-m
 const Textarea = styled(Input).attrs({ as: "textarea" })`
   ${tw`h-24`}
 `;
-const HighlightedText = tw.p`bg-gray-700 text-gray-100 px-4 transform -skew-x-12 inline-block`;
+const HighlightedText = tw.p`bg-darkgold text-gray-100 px-4 transform -skew-x-12 inline-block`;
 
 // const socialMedia = styled.div`
 // ${tw`flex items-center justify-between`}
@@ -44,13 +44,13 @@ const SubmitButton = styled.button`
   ${tw`text-white py-3 px-2 mt-6`}
   transition: opacity 0.4s, background-color 0.4s, border 0.4s;
   font-weight: 600;
-  background: #460fb3 !important;
+  background: #b5990d !important;
   border-radius: 10px;
-  border: 3px solid #460fb3;
+  border: 3px solid #b5990d;
 
   &:hover {
     background: transparent !important;
-    color: #460fb3 !important;
+    color: #b5990d !important;
   }
 `;
 
@@ -174,7 +174,7 @@ export default ({
           </TextColumn>
         </TwoColumn>
         <ToastContainer
-          toastClassName="bg-gray-700"
+          toastClassName="bg-darkgold"
           position="top-center"
           autoClose={5000}
           hideProgressBar={false}

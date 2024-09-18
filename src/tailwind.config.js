@@ -37,7 +37,8 @@ module.exports = {
         800: "#192b45",
         900: "#16253b",
       },
-      gold: "#9e8603",
+      gold: "#e3ce14",
+      darkgold: "#b5990d",
       gray: {
         lightest: "#fff",
         100: "#f7fafc",
@@ -427,6 +428,8 @@ module.exports = {
       25: "0.25",
       50: "0.5",
       75: "0.75",
+      80: "0.80",
+      90: "0.90",
       100: "1",
     },
     order: {

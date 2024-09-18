@@ -9,15 +9,15 @@ const GoToTopButton = styled.button`
   color: white;
   bottom: 20px;
   right: 20px;
-  background: #4a5568;
-  border: 3px solid #4a5568;
+  background: #b5990d;
+  border: 3px solid #b5990d;
 
   /* Hide the button when not visible */
   opacity: ${({ isVisible }) => (isVisible ? "1" : "0")};
 
   &:hover {
     background-color: transparent;
-    color: #4a5568;
+    color: #b5990d;
   }
 `;
 

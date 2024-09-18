@@ -8,7 +8,6 @@ import Title from "components/common/Title.js";
 import { SectionHeading } from "components/misc/Headings.js";
 // import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-5.svg";
 // import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-7.svg";
-import { useNavigate } from "react-router-dom";
 import Data from "data/events.json";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
@@ -19,9 +18,9 @@ const TabsControl = tw.div`flex flex-wrap bg-gray-200 px-2 py-2 rounded leading-
 const TabControl = styled.div`
   ${tw`cursor-pointer px-6 py-3 mt-2 sm:mt-0 sm:mr-2 last:mr-0 text-gray-600 font-medium rounded-sm transition duration-300 text-sm sm:text-base w-1/2 sm:w-auto text-center`}
   &:hover {
-    ${tw`bg-gray-300 text-gray-700`}
+    ${tw`bg-gray-300 text-gold`}
   }
-  ${(props) => props.active && tw`bg-gray-700! text-gray-100!`}
+  ${(props) => props.active && tw`bg-darkgold! text-gray-100!`}
   }
 `;
 
@@ -30,7 +29,7 @@ const TabContent = tw(
 )`mt-6 flex flex-wrap sm:-mr-10 md:-mr-6 lg:-mr-12`;
 const CardContainer = tw.div`mt-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 sm:pr-10 md:pr-6 lg:pr-12`;
 const Card = tw(
-  motion.a
+  motion.div
 )`bg-gray-200 rounded-b block max-w-xs mx-auto sm:max-w-none sm:mx-0 cursor-pointer`;
 const CardImageContainer = styled.div`
   ${tw`h-56 xl:h-64 bg-center bg-cover relative rounded-t overflow-hidden bg-no-repeat`}
@@ -43,14 +42,14 @@ const CardImage = styled.img`
   ${tw` hover:scale-110 transition duration-700 ease-in-out`}
 `;
 const CardText = tw.div`p-4 text-gray-900`;
-const CardTitle = tw.h5`text-lg font-semibold group-hover:text-gray-700`;
+const CardTitle = tw.h5`text-lg font-semibold group-hover:text-gold`;
 const CardContent = tw.p`mt-1 text-sm font-medium text-gray-600`;
 
 // const DecoratorBlob1 = styled(SvgDecoratorBlob1)`
 //   ${tw`pointer-events-none -z-20 absolute right-0 top-0 h-64 w-64 opacity-15 transform translate-x-2/3 -translate-y-12 text-pink-400`}
 // `;
 // const DecoratorBlob2 = styled(SvgDecoratorBlob2)`
-//   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-gray-700`}
+//   ${tw`pointer-events-none -z-20 absolute left-0 bottom-0 h-80 w-80 opacity-15 transform -translate-x-2/3 text-gold`}
 // `;
 
 export default () => {
@@ -61,7 +60,6 @@ export default () => {
    */
   const tabsKeys = Object.keys(Data.tabs);
   const [activeTab, setActiveTab] = useState(tabsKeys[0]);
-  const navigate = useNavigate();
 
   return (
     <>
@@ -108,9 +106,7 @@ export default () => {
               {Data.tabs[tabKey].map((card, index) => (
                 <CardContainer key={index}>
                   <Card
-                    onClick={() => navigate(`event/${card.slug}`)}
                     className="group"
-                    href={card.url}
                     initial="rest"
                     whileHover="hover"
                     animate="rest"

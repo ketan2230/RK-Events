@@ -28,7 +28,7 @@ const Image = styled.img((props) => [
 ]);
 
 const DecoratorBlob = styled(SvgDotPattern)((props) => [
-  tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-gray-700 -z-10`,
+  tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-gold -z-10`,
 ]);
 
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
@@ -49,7 +49,7 @@ export default (
     subheading = "Our Expertise",
     heading = (
       <>
-        Designed & Developed by <span tw="text-gray-700">Professionals.</span>
+        Designed & Developed by <span tw="text-gold">Professionals.</span>
       </>
     ),
     description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

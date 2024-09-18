@@ -8,26 +8,26 @@ import { ReactComponent as CallIcon } from "../../images/call.svg";
 import { ReactComponent as Email } from "../../images/email.svg";
 
 const HeaderContent = styled.div`
-  ${tw`sm:flex py-1 w-full bg-gray-700`}
+  ${tw`sm:flex py-3 sm:px-40 w-full transition duration-300`}
 `;
 
 const SocialLinksContainer = tw.div`my-2 sm:my-1 mx-auto sm:mx-8 mr-4 sm:justify-end flex w-full`;
 const ContactContainer = tw.div`hidden my-1 mt-1 ml-4 sm:flex items-center`;
-const Details = tw.div`text-gray-400 hover:text-gray-100 transition cursor-pointer duration-300 mx-2`;
+const Details = tw.div`text-sm sm:text-lg text-gray-400 hover:text-gold transition cursor-pointer duration-300 mx-2`;
 const SocialLinkContact = styled.a`
-  ${tw`cursor-pointer flex items-center text-gray-400 hover:text-gray-100 transition duration-300 mx-4 font-mono sm:w-full`}
+  ${tw`cursor-pointer flex items-center text-gray-400 hover:text-gold transition duration-300 mx-4 font-mono sm:w-full`}
   svg {
     ${tw`w-5 h-5`}
   }
 `;
 const SocialLinkContactMobile = styled.a`
-  ${tw`cursor-pointer inline-block sm:hidden hover:shadow-md hover:transform hover:transition duration-300 text-gray-400 hover:text-gray-100 transition duration-300 mx-auto sm:mx-4`}
+  ${tw`cursor-pointer inline-block sm:hidden hover:shadow-md hover:transform hover:transition duration-300 text-gray-400 hover:text-gold transition duration-300 mx-auto sm:mx-4`}
   svg {
     ${tw`w-5 h-5`}
   }
 `;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block hover:shadow-md hover:transform hover:transition duration-300 text-gray-400 hover:text-gray-100 transition duration-300 mx-auto sm:mx-4`}
+  ${tw`cursor-pointer inline-block hover:shadow-md hover:transform hover:transition duration-300 text-gray-400 hover:text-gold transition duration-300 mx-auto sm:mx-4`}
   svg {
     ${tw`w-5 h-5`}
   }
